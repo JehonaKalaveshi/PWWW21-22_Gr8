@@ -1,0 +1,42 @@
+h1, h2, h3,h5
+{ font-family: 'Times New Roman', Times, serif;
+    padding: 0%;
+    margin: 0%;
+}
+header
+{
+    background-color: black;
+    color: white;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
+    background-color:whitesmoke ;
+}
+a:link{
+    text-decoration: none;
+     color:white;
+}
+a:visited{
+    color:white;
+}
+a:hover
+{
+    background-color: rgb(122, 168, 255);
+}
+header h1{
+    padding: 0.5em 0 0 1.3em;
+    text-transform: uppercase;
+
+}
+header h5{
+    padding: 0.5em 0 0 2.3em;
+
+}
+header nav ul li{
+    list-style:none;
+    display: inline;
+    font-size: 70%;
+    margin-top: -10px;
+    padding: 5px;
+}
