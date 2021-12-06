@@ -5,13 +5,18 @@ h1, h2, h3,h5
 }
 header
 {
+    margin: 0%;
+    padding: 0%;
     background-color: black;
     color: white;
+    border-top: 5px solid #40aed7;
+    height: 7.5em;
 }
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 100%;
-    background-color:whitesmoke ;
+    margin: 0%;
+    padding: 0%;
 }
 a:link{
     text-decoration: none;
@@ -27,6 +32,8 @@ a:hover
 header h1{
     padding: 0.5em 0 0 1.3em;
     text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.05em;
 
 }
 header h5{
@@ -39,4 +46,81 @@ header nav ul li{
     font-size: 70%;
     margin-top: -10px;
     padding: 5px;
+}
+
+header nav p {
+    margin: 0;
+    padding: 0;
+    margin-left: 2em;
+}
+
+#logo {
+    width: 19em;
+    margin-top: 1.2em;
+    position: relative;
+    float: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navBar {
+    height: 100px;
+    margin-top: 2em;
+    position: relative;
+    float: right;
+    right: 10%;
+}
+
+.navBar a {
+    font-size: medium;
+    padding: 15px;
+}
+
+.navBar a:hover {
+    border-radius: 10px;
+}
+
+#massive {
+    font-size: 7.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: #333333;
+    margin: 2%;
+}
+
+.services {
+    width: 100%;
+}
+
+.service {
+    width: 22%;
+    height: 350px;
+    border: 1px solid #333333;
+    margin-left: 2em;
+    position: relative;
+    float: left;
+}
+
+.service img {
+    padding: 15% 25% 5% 25%;
+}
+
+.service h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #333333;
+}
+
+.service p {
+    color: #9b9b9b;
+    text-align: center;
+    padding: 1em 2em 0 2em;
+}
+
+.team {
+    position: relative;
+    float: left;
+}
+
+footer {
+    float: left;
 }
