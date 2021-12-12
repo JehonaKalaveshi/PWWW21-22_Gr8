@@ -18,17 +18,17 @@ body{
     margin: 0%;
     padding: 0%;
 }
-a:link{
+.navBar a:link{
     text-decoration: none;
      color:white;
 }
 a:visited{
     color:white;
 }
-a:hover
+/* a:hover
 {
     background-color: rgb(122, 168, 255);
-}
+} */
 header h1{
     padding: 0.5em 0 0 1.3em;
     text-transform: uppercase;
@@ -70,13 +70,14 @@ header nav p {
     right: 10%;
 }
 
-.navBar a {
+.navBar a  {
     font-size: medium;
     padding: 15px;
 }
 
 .navBar a:hover {
     border-radius: 10px;
+    background-color: rgb(122, 168, 255);
 }
 
 #massive {
@@ -126,6 +127,10 @@ footer {
     float: left;
     width: 100%;
     background-color: black;
+}
+footer a:link{
+    color: #949494;
+    text-decoration: none;
 }
 
 
