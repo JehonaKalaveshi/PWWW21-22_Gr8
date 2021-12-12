@@ -177,3 +177,11 @@ td {
     width: 20%;
     padding-left: 5%;
 }
+
+.rounded{
+    font-size: 90%;
+    padding: 2%;
+    color: white;
+    background-color: #40AED7;
+    border-radius: 0.5em;
+}
