@@ -122,7 +122,36 @@ header nav p {
     float: left;
 }
 
+.teamMember {
+    width: 22%;
+    height: 600px;
+    /* border: 1px solid #333333;  */
+    margin-left: 2em;
+    position: relative;
+    float: left;
+}
+
+.teamMember figcaption {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #383838;
+    padding: 3%;
+}
+
+.teamMember p{
+    color: #979797;
+}
+
+.teamMember a:link {
+    padding-top: 0.5em;
+    float: right;
+    color: #47B1D8;
+    text-decoration: none;
+}
+
 footer {
+    margin-top: 4em;
     color: #949494;
     float: left;
     width: 100%;
@@ -132,6 +161,3 @@ footer a:link{
     color: #949494;
     text-decoration: none;
 }
-
-
-    
