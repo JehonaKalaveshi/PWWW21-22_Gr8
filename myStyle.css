@@ -1,10 +1,13 @@
-h1, h2, h3,h5
-{ font-family: 'Times New Roman', Times, serif;
+h1,
+h2,
+h3,
+h5 {
+    font-family: 'Times New Roman', Times, serif;
     padding: 0%;
     margin: 0%;
 }
-header
-{
+
+header {
     margin: 0%;
     padding: 0%;
     background-color: black;
@@ -12,36 +15,42 @@ header
     border-top: 5px solid #40aed7;
     height: 7.5em;
 }
-body{
+
+body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 100%;
     margin: 0%;
     padding: 0%;
 }
-.navBar a:link{
+
+.navBar a:link {
     text-decoration: none;
-     color:white;
+    color: white;
 }
-a:visited{
-    color:white;
+
+a:visited {
+    color: white;
 }
+
+
 /* a:hover
 {
     background-color: rgb(122, 168, 255);
 } */
-header h1{
+
+header h1 {
     padding: 0.5em 0 0 1.3em;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 0.05em;
-
 }
-header h5{
+
+header h5 {
     padding: 0.5em 0 0 2.3em;
-
 }
-header nav ul li{
-    list-style:none;
+
+header nav ul li {
+    list-style: none;
     display: inline;
     font-size: 70%;
     margin-top: -10px;
@@ -70,7 +79,7 @@ header nav p {
     right: 10%;
 }
 
-.navBar a  {
+.navBar a {
     font-size: medium;
     padding: 15px;
 }
@@ -139,7 +148,7 @@ header nav p {
     padding: 3%;
 }
 
-.teamMember p{
+.teamMember p {
     color: #979797;
 }
 
@@ -157,7 +166,14 @@ footer {
     width: 100%;
     background-color: black;
 }
-footer a:link{
+
+footer a:link {
     color: #949494;
     text-decoration: none;
+}
+
+th,
+td {
+    width: 20%;
+    padding-left: 5%;
 }
