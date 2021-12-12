@@ -122,5 +122,11 @@ header nav p {
 }
 
 footer {
+    color: #949494;
     float: left;
+    width: 100%;
+    background-color: black;
 }
+
+
+    
