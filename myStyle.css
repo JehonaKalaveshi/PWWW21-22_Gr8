@@ -23,38 +23,11 @@ body {
     padding: 0%;
 }
 
-.navBar a:link {
-    text-decoration: none;
-    color: white;
-}
-
-.navBar a:visited {
-    color: white;
-}
-
-
-/* a:hover
-{
-    background-color: rgb(122, 168, 255);
-} */
-
 header h1 {
     padding: 0.5em 0 0 1.3em;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 0.05em;
-}
-
-header h5 {
-    padding: 0.5em 0 0 2.3em;
-}
-
-header nav ul li {
-    list-style: none;
-    display: inline;
-    font-size: 70%;
-    /* margin-top: -10px; */
-    padding: 5px;
 }
 
 header nav p {
@@ -71,6 +44,13 @@ header nav p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+header nav ul li {
+    list-style: none;
+    display: inline;
+    font-size: 70%;
+    padding: 5px;
+}
+
 .navBar {
     height: 100px;
     margin-top: 2em;
@@ -84,6 +64,15 @@ header nav p {
     padding: 15px;
 }
 
+.navBar a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.navBar a:visited {
+    color: white;
+}
+
 .navBar a:hover {
     border-radius: 10px;
     background-color: rgb(122, 168, 255);
@@ -95,11 +84,6 @@ header nav p {
     font-weight: 300;
     color: #333333;
     margin: 2%;
-    /* text-align: center; */
-}
-
-.team a {
-    color: rgb(122, 168, 255);
 }
 
 .services {
@@ -112,6 +96,7 @@ header nav p {
     height: 350px;
     border: 1px solid #333333;
     margin-left: 2em;
+    padding-bottom: 2em;
     position: relative;
     float: left;
     background-repeat: no-repeat;
@@ -120,20 +105,14 @@ header nav p {
 
 .service h2 {
     margin-top: 65%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #333333;
 }
 
 .service img {
     padding: 15% 0% 5% 0%;
 }
-
-
-/* .serviceImage {
-    /* background-image: url(images/service1.png); 
-    width: 100%; 
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 10%;    
-} */
 
 #serviceImg1 {
     background-image: url(images/service1.png);
@@ -167,12 +146,6 @@ header nav p {
     background-image: url(images/service4_hover.png);
 }
 
-.service h2 {
-    text-transform: uppercase;
-    text-align: center;
-    color: #333333;
-}
-
 .service p {
     color: #9b9b9b;
     text-align: center;
@@ -193,13 +166,14 @@ header nav p {
     float: left;
 }
 
+.team a {
+    color: rgb(122, 168, 255);
+}
+
 .teamMember {
-    /* width: 22%;
-    margin-left: 2em;     */
     width: 22.5%;
     margin-left: 2%;
     height: 600px;
-    /* border: 1px solid #333333;  */
     position: relative;
     float: left;
 }
@@ -226,16 +200,13 @@ header nav p {
 }
 
 footer {
-    /* margin-top: 4em; */
     color: #949494;
     float: left;
     width: 100%;
     background-color: #303030;
-    /* padding-bottom: 5em;     */
 }
 
 footer a:link {
-    /* color: #949494; */
     color: #40aed7;
     text-decoration: none;
 }
