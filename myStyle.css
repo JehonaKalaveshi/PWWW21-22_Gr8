@@ -28,7 +28,7 @@ body {
     color: white;
 }
 
-a:visited {
+.navBar a:visited {
     color: white;
 }
 
@@ -37,7 +37,6 @@ a:visited {
 {
     background-color: rgb(122, 168, 255);
 } */
-
 
 header h1 {
     padding: 0.5em 0 0 1.3em;
@@ -99,6 +98,10 @@ header nav p {
     /* text-align: center; */
 }
 
+.team a {
+    color: rgb(122, 168, 255);
+}
+
 .services {
     width: 100%;
 }
@@ -122,6 +125,7 @@ header nav p {
 .service img {
     padding: 15% 0% 5% 0%;
 }
+
 
 /* .serviceImage {
     /* background-image: url(images/service1.png); 
@@ -179,7 +183,8 @@ header nav p {
     background-color: #40aed7;
 }
 
-.service:hover p, .service:hover h2 {
+.service:hover p,
+.service:hover h2 {
     color: #ffffff;
 }
 
@@ -235,6 +240,10 @@ footer a:link {
     text-decoration: none;
 }
 
+footer a:visited {
+    color: #40aed7;
+}
+
 th,
 td {
     width: 20%;
@@ -271,19 +280,20 @@ footer th {
     margin: 0;
 }
 
-footer input, textarea {
+footer input,
+textarea {
     background-color: #222222;
     width: 14em;
     padding: 0.5em;
     font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 0.5em; 
+    margin-bottom: 0.5em;
 }
 
 .copyright {
-    margin-top: 3em;    
+    margin-top: 3em;
     background-color: #2b2b2b;
-    height:50px;
+    height: 50px;
 }
 
 .copyright p {
