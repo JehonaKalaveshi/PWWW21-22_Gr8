@@ -2,7 +2,7 @@ h1,
 h2,
 h3,
 h5 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 0%;
     margin: 0%;
 }
@@ -17,7 +17,7 @@ header {
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 100%;
     margin: 0%;
     padding: 0%;
@@ -126,6 +126,14 @@ header nav p {
     color: #9b9b9b;
     text-align: center;
     padding: 1em 2em 0 2em;
+}
+
+.service:hover {
+    background-color: #40aed7;
+}
+
+.service:hover p, .service:hover h2 {
+    color: #ffffff;
 }
 
 .team {
