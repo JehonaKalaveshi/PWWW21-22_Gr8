@@ -38,6 +38,7 @@ a:visited {
     background-color: rgb(122, 168, 255);
 } */
 
+
 header h1 {
     padding: 0.5em 0 0 1.3em;
     text-transform: uppercase;
@@ -126,6 +127,10 @@ header nav p {
     color: #9b9b9b;
     text-align: center;
     padding: 1em 2em 0 2em;
+}
+
+.service a:hover{
+    background-color: #40aed7;
 }
 
 .team {
