@@ -2,273 +2,326 @@ h1,
 h2,
 h3,
 h5 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 0%;
-    margin: 0%;
-}
-
-header {
-    margin: 0%;
-    padding: 0%;
-    background-color: black;
-    color: white;
-    border-top: 5px solid #40aed7;
-    height: 7.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0%;
+  margin: 0%;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 100%;
-    margin: 0%;
-    padding: 0%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Start of the header */
+header {
+  margin: 0%;
+  padding: 0%;
+  background-color: black;
+  color: white;
+  border-top: 5px solid #40aed7;
+  height: 7.5em;
 }
 
 header h1 {
-    padding: 0.5em 0 0 1.3em;
-    text-transform: uppercase;
-    font-weight: 300;
-    letter-spacing: 0.05em;
+  padding: 0.5em 0 0 1.3em;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.05em;
 }
 
 header nav p {
-    margin: 0;
-    padding: 0;
-    margin-left: 2em;
-}
-
-#logo {
-    width: 19em;
-    margin-top: 1.2em;
-    position: relative;
-    float: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  margin-left: 2em;
 }
 
 header nav ul li {
-    list-style: none;
-    display: inline;
-    font-size: 70%;
-    padding: 5px;
+  list-style: none;
+  display: inline;
+  font-size: 70%;
+  padding: 5px;
+}
+
+#logo {
+  width: 19em;
+  margin-top: 1.2em;
+  position: relative;
+  float: left;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .navBar {
-    height: 100px;
-    margin-top: 2em;
-    position: relative;
-    float: right;
-    right: 10%;
+  height: 100px;
+  margin-top: 2em;
+  position: relative;
+  float: right;
+  right: 10%;
 }
 
 .navBar a {
-    font-size: medium;
-    padding: 15px;
+  font-size: medium;
+  padding: 15px;
 }
 
 .navBar a:link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .navBar a:visited {
-    color: white;
+  color: white;
 }
 
 .navBar a:hover {
-    border-radius: 10px;
-    background-color: rgb(122, 168, 255);
+  border-radius: 10px;
+  background-color: rgb(122, 168, 255);
 }
 
+/* End of header */
+
+/* Styling the massive text part */
 #massive {
-    font-size: 7.5em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 300;
-    color: #333333;
-    margin: 2%;
+  font-size: 7.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  color: #333333;
+  margin: 2%;
 }
 
+/* End of massive text */
+
+/* The Services section */
 .services {
-    width: 100%;
+  width: 100%;
 }
 
 .service {
-    text-align: center;
-    width: 22%;
-    height: 350px;
-    border: 1px solid #333333;
-    margin-left: 2em;
-    padding-bottom: 2em;
-    position: relative;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: 50% 20%;
+  text-align: center;
+  /* width: 22%; */
+  width: 22.5%;
+  margin-left: 2%;
+  /* height: 350px; */
+  border: 1px solid #333333;
+  /* margin-left: 2em; */
+  padding-bottom: 2em;
+  position: relative;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
 }
 
 .service h2 {
-    margin-top: 65%;
-    text-transform: uppercase;
-    text-align: center;
-    color: #333333;
+  margin-top: 65%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+  font-size: 350%;
+  font-weight: normal;
 }
 
 .service img {
-    padding: 15% 0% 5% 0%;
+  padding: 15% 0% 5% 0%;
 }
 
 #serviceImg1 {
-    background-image: url(images/service1.png);
+  background-image: url(images/service1.png);
 }
 
 #serviceImg2 {
-    background-image: url(images/service2.png);
+  background-image: url(images/service2.png);
 }
 
 #serviceImg3 {
-    background-image: url(images/service3.png);
+  background-image: url(images/service3.png);
 }
 
 #serviceImg4 {
-    background-image: url(images/service4.png);
+  background-image: url(images/service4.png);
 }
 
 #serviceImg1:hover {
-    background-image: url(images/service1_hover.png);
+  background-image: url(images/service1_hover.png);
 }
 
 #serviceImg2:hover {
-    background-image: url(images/service2_hover.png);
+  background-image: url(images/service2_hover.png);
 }
 
 #serviceImg3:hover {
-    background-image: url(images/service3_hover.png);
+  background-image: url(images/service3_hover.png);
 }
 
 #serviceImg4:hover {
-    background-image: url(images/service4_hover.png);
+  background-image: url(images/service4_hover.png);
 }
 
 .service p {
-    color: #9b9b9b;
-    text-align: center;
-    padding: 1em 2em 0 2em;
+  color: #9b9b9b;
+  text-align: center;
+  padding: 1em 2em 0 2em;
 }
 
 .service:hover {
-    background-color: #40aed7;
+  background-color: #40aed7;
 }
 
 .service:hover p,
 .service:hover h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
+/* End of the Services section */
+
+/* The Team section */
 .team {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
 .team a {
-    color: rgb(122, 168, 255);
+  color: rgb(122, 168, 255);
 }
 
 .teamMember {
-    width: 22.5%;
-    margin-left: 2%;
-    height: 600px;
-    position: relative;
-    float: left;
+  width: 22.5%;
+  margin-left: 2%;
+  /* height: 600px; */
+  position: relative;
+  float: left;
+}
+
+.teamMember img {
+  width: 100%;
 }
 
 .teamMember figcaption {
-    font-size: x-large;
-    font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #383838;
-    padding: 3%;
-    text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #383838;
+  padding: 3%;
+  text-align: center;
 }
 
 .teamMember p {
-    color: #979797;
-    font-size: 1.087em;
+  color: #979797;
+  font-size: 1.087em;
 }
 
 .teamMember a:link {
-    padding-top: 0.5em;
-    float: right;
-    color: #47B1D8;
-    text-decoration: none;
+  padding-top: 0.5em;
+  float: right;
+  color: #47b1d8;
+  text-decoration: none;
 }
+/* End of the Team section */
 
+/* Start of the footer */
 footer {
-    color: #949494;
-    float: left;
-    width: 100%;
-    background-color: #303030;
+  color: #949494;
+  float: left;
+  width: 100%;
+  background-color: #303030;
+  margin-top: 5%;
 }
 
 footer a:link {
-    color: #40aed7;
-    text-decoration: none;
+  color: #40aed7;
+  text-decoration: none;
 }
 
 footer a:visited {
-    color: #40aed7;
+  color: #40aed7;
 }
 
 th,
 td {
-    width: 20%;
-    padding-left: 3%;
+  width: 20%;
+  padding-left: 3%;
 }
 
 .rounded {
-    font-size: 90%;
-    padding: 2%;
-    color: white;
-    background-color: #40AED7;
-    border-radius: 0.5em;
+  font-size: 90%;
+  padding: 2%;
+  color: white;
+  background-color: #40aed7;
+  border-radius: 0.5em;
 }
 
 footer table {
-    padding-top: 2.5em;
+  padding-top: 2.5em;
 }
 
 footer th {
-    color: #ffffff;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 100;
-    font-size: 21px;
-    text-align: left;
-    padding-bottom: 2.125em;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  font-size: 21px;
+  text-align: left;
+  padding-bottom: 2.125em;
 }
 
 .postUser {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .postTitle {
-    font-size: 17px;
-    margin: 0;
+  font-size: 17px;
+  margin: 0;
 }
 
 footer input,
 textarea {
-    background-color: #222222;
-    width: 14em;
-    padding: 0.5em;
-    font-size: 17px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 0.5em;
+  background-color: #222222;
+  width: 14em;
+  padding: 0.5em;
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 0.5em;
 }
 
 .copyright {
-    margin-top: 3em;
-    background-color: #2b2b2b;
-    height: 50px;
+  margin-top: 3em;
+  background-color: #2b2b2b;
+  height: 50px;
 }
 
 .copyright p {
-    height: 50px;
-    line-height: 50px;
-    padding-left: 3%;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 3%;
+}
+
+/* End of the footer */
+
+/* Responsiveness */
+@media screen and (max-width: 500px) {
+  .service {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+  }
+
+  #massive {
+    font-size: 300%;
+    margin-top: 0%;
+  }
+
+  .teamMember {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+
+  tr,
+  td {
+    width: 80%;
+    float: left;
+  }
+
+  th {
+    font-size: 0;
+  }
 }
