@@ -325,3 +325,96 @@ textarea {
     font-size: 0;
   }
 }
+
+/* End of Responsiveness */
+
+/* Blog page */
+
+.topPosts {
+  width: 75%;
+  height: 37.5em;
+  margin-top: 2%;
+  margin-left: 12.5%;
+  display: flex;
+  text-align: center;
+}
+
+.topPosts p {
+  color:rgb(122, 168, 255);
+}
+
+#topLeft {
+  width: 29%;
+  height: 100%;
+}
+
+#topPost1 {
+  width: 100%;
+  height: 45%;
+  background-image: url("images/blogimg1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  margin-top: 0px;
+}
+
+#topPost2 {
+  width: 100%;
+  height: 45%;
+  margin-top: 10%;
+  background-image: url("images/blogimg4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#topPost1 p, #topPost2 p {
+  padding-top: 17.5em;
+  font-size: 120%;
+}
+
+#topPostBig {
+  width: 69.5%;
+  height: 100%;
+  margin-top: 1.1%;
+  margin-left: 1.5%;
+  background-image: url(images/blogimg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+#topPostBig p {
+  padding-top: 37.5em;
+  font-size: 120%;
+}
+
+.usualPost {
+  width: 31.33%;
+  height: 40%;
+  margin-top: 5%;
+  margin-right: 3%;
+  background-image: url("images/blog.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  float: left;
+}
+
+.usualPost p {
+  margin-top: 70%;
+  font-size: 120%;
+  font-weight: normal;
+}
+
+.botPosts {
+  width: 75%;
+  height: 37.5em;
+  margin-top: 2%;
+  margin-left: 12.5%;
+}
+
+.imageDesc {
+  text-align: center;
+}
