@@ -339,8 +339,8 @@ textarea {
   text-align: center;
 }
 
-.topPosts p {
-  color:rgb(122, 168, 255);
+.topPosts p, .usualPost p  {
+  color:rgba(122, 168, 255, 200);
 }
 
 #topLeft {
@@ -351,7 +351,7 @@ textarea {
 #topPost1 {
   width: 100%;
   height: 45%;
-  background-image: url("images/blogimg1.jpg");
+  background-image: url("images/blogimg5.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
@@ -383,8 +383,8 @@ textarea {
 }
 
 #topPost1 p, #topPost2 p {
-  padding-top: 14.2em;
-  font-size: 120%;
+  padding-top: 17.2em;
+  font-size: 1rem;
 }
 
 #topPostBig {
@@ -405,11 +405,14 @@ textarea {
   opacity: 0.8;
 }
 
-
 #topPostBig p {
-  padding-top: 31em;
-  font-size: 120%;
+  padding-top: 37em;
+  font-size: 1rem;
 }
+
+a:-webkit-any-link{
+  text-decoration:none !important;
+  }
 
 .usualPost {
   width: 31.33%;
@@ -427,7 +430,27 @@ textarea {
 }
 
 #up1 {
-  background-image: url("images/blogimg5.png");
+  background-image: url("images/blogimg7.jpg");
+}
+
+#up2 {
+  background-image: url("images/blogimg3.jpg");
+}
+
+#up3 {
+  background-image: url("images/blogimg6.jpg");
+}
+
+#up4 {
+  background-image: url("images/blogimg8.jpg");
+}
+
+#up5 {
+  background-image: url("images/blogimg1.jpg");
+}
+
+#up6 {
+  background-image: url("images/blogimg9.jpg");
 }
 
 .usualPost:hover {
@@ -435,8 +458,8 @@ textarea {
 }
 
 .usualPost p {
-  padding-top: 12em;
-  font-size: 120%;
+  padding-top: 14.5em;
+  font-size: 1rem;
   font-weight: normal;
 }
 
@@ -449,4 +472,22 @@ textarea {
 
 .imageDesc {
   text-align: center;
+}
+
+.buttonSpace {
+  width: 75%;
+  margin-left: 12.5%;
+  text-align: center;
+}
+
+.usualButton {
+  margin-top: 5%;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color:rgb(122, 168, 255);
+  border: 1px rgb(122, 168, 255) solid;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
 }
