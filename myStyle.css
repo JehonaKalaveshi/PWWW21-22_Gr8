@@ -356,6 +356,13 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;  
   margin-top: 0px;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;    
+}
+
+#topPost1:hover {
+  opacity: 0.8;
 }
 
 #topPost2 {
@@ -366,10 +373,17 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;    
+}
+
+#topPost2:hover {
+  opacity: 0.8;
 }
 
 #topPost1 p, #topPost2 p {
-  padding-top: 17.5em;
+  padding-top: 14.2em;
   font-size: 120%;
 }
 
@@ -382,10 +396,18 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;
 }
 
+#topPostBig:hover {
+  opacity: 0.8;
+}
+
+
 #topPostBig p {
-  padding-top: 37.5em;
+  padding-top: 31em;
   font-size: 120%;
 }
 
@@ -394,16 +416,26 @@ textarea {
   height: 40%;
   margin-top: 5%;
   margin-right: 3%;
-  background-image: url("images/blog.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   float: left;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  transition: 0.6s;  
+}
+
+#up1 {
+  background-image: url("images/blogimg5.png");
+}
+
+.usualPost:hover {
+  opacity: 0.8;
 }
 
 .usualPost p {
-  margin-top: 70%;
+  padding-top: 12em;
   font-size: 120%;
   font-weight: normal;
 }
