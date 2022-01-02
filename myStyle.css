@@ -514,11 +514,17 @@ a:-webkit-any-link {
 /* Calendar */
 
 .month {
-    border: #949494;
-    border-radius: 10%;
+    text-align: justify;
+    width: 40%;
+    margin: 2%;
+    border-radius: 5%;
+    border: 1px solid #333333;
+    float: left;
+    padding: 2%;
 }
 
 .month h1 {
+    text-align: center;
     font-size: 3em;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: 300;
@@ -528,9 +534,101 @@ a:-webkit-any-link {
 
 .month img {
     width: 40px;
+    border: 1px solid #333333;
     border-radius: 50%;
     position: relative;
     text-align: center;
     padding: 0.1em;
     margin-left: 2%;
+}
+
+.signUp {
+    text-align: center;
+    width: 40%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 5%;
+    border: 1px solid #333333;
+    float: right;
+}
+
+.signUp h2 {
+    text-align: center;
+    font-size: 3em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 300;
+    color: #333333;
+    margin: 2%;
+}
+
+.logIn input,
+email {
+    display: inline-block;
+    width: 14em;
+    padding: 0.5em;
+    font-size: 17px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.logIn sumbit {
+    text-align: center;
+    background-color: #47b1d8;
+    width: 14em;
+    padding: 0.5em;
+    font-size: 17px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 0.5em;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 300px;
+    }
+}
+
+#food img {
+    width: 50px;
+    float: left;
+    position: relative;
+    padding: 0.1em;
+    margin-left: 2%;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+}
+
+#drink img {
+    width: 50px;
+    float: left;
+    position: relative;
+    padding: 0.1em;
+    margin-left: 2%;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+}
+
+#excercise img {
+    width: 50px;
+    float: left;
+    position: relative;
+    padding: 0.1em;
+    margin-left: 2%;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+}
+
+#plan img {
+    width: 50px;
+    float: left;
+    position: relative;
+    padding: 0.1em;
+    margin-left: 2%;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
 }
