@@ -643,6 +643,9 @@ a:-webkit-any-link {
 
 /* Calendar */
 
+
+/* Calendar */
+
 .month {
     text-align: justify;
     width: 40%;
@@ -653,7 +656,8 @@ a:-webkit-any-link {
     padding: 2%;
 }
 
-.month h1 {
+.month h1,
+h3 {
     text-align: center;
     font-size: 3em;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -662,14 +666,54 @@ a:-webkit-any-link {
     margin: 2%;
 }
 
+.month h3 {
+    font-size: 2em;
+}
+
 .month img {
     width: 40px;
-    border: 1px solid #333333;
+    border: 1px ridge #333333;
     border-radius: 50%;
     position: relative;
     text-align: center;
     padding: 0.1em;
     margin-left: 2%;
+}
+
+.month mark {
+    font-weight: bold;
+    background-color: #979797;
+}
+
+.theButton {
+    /* text-align: center;
+    background-color: #47b1d8;
+    width: 14em;
+    padding: 0.5em;
+    font-size: 17px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 0.5em; */
+    border: 2px ridge #47b1d8;
+    border-radius: 5px;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.theButton:hover {
+    background-color: #47b1d8;
+    color: white;
 }
 
 .signUp {
@@ -714,51 +758,56 @@ email {
     margin-bottom: 0.5em;
 }
 
+.logIn submit:hover {
+    transition-duration: 0.4s;
+    box-shadow: 5px 10px 8px #888888;
+}
+
 @keyframes mymove {
     from {
-        left: 0px;
+        left: 50px;
     }
     to {
-        left: 300px;
+        left: 600px;
     }
 }
 
 #food img {
-    width: 50px;
-    float: left;
+    width: 100px;
+    /* float: left; */
     position: relative;
     padding: 0.1em;
     margin-left: 2%;
-    animation: mymove 5s infinite;
-    animation-timing-function: linear;
+    animation: mymove 6s infinite;
+    animation-timing-function: ease-in-out;
 }
 
 #drink img {
-    width: 50px;
-    float: left;
+    width: 100px;
+    /* float: left; */
     position: relative;
     padding: 0.1em;
     margin-left: 2%;
-    animation: mymove 5s infinite;
-    animation-timing-function: linear;
+    animation: mymove 6s infinite;
+    animation-timing-function: ease;
 }
 
 #excercise img {
-    width: 50px;
-    float: left;
+    width: 100px;
+    /* float: left; */
     position: relative;
     padding: 0.1em;
     margin-left: 2%;
-    animation: mymove 5s infinite;
-    animation-timing-function: linear;
+    animation: mymove 6s infinite;
+    animation-timing-function: ease-in;
 }
 
 #plan img {
-    width: 50px;
-    float: left;
+    width: 100px;
+    /* float: left; */
     position: relative;
     padding: 0.1em;
     margin-left: 2%;
-    animation: mymove 5s infinite;
-    animation-timing-function: linear;
+    animation: mymove 6s infinite;
+    animation-timing-function: ease-out;
 }
