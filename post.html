@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="myStyle.css">
-    <title>Blog posts - Astounding</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="myStyle.css">
+  <title>How to Have a Better Workout Routine - Astounding</title>
 </head>
 
 <body>
@@ -133,21 +133,21 @@
         </p>
     </article>
 
-    <div class="postCommentSection">
-        <div class="postLeaveComment">
-            <img src="https://secure.gravatar.com/avatar/?s=56&d=mm&r=g">
-            <textarea id="commentSectionTA" placeholder="Leave a comment..." "></textarea><br>
+  <div class="postCommentSection" id="postCommentSection">
+    <div class="postLeaveComment">
+      <img src="https://secure.gravatar.com/avatar/?s=56&d=mm&r=g">
+      <textarea id="commentSectionTA" placeholder="Leave a comment..."></textarea><br>
     </div>
-    <div class="postCommentButtonSection ">
-      <button type="button " name="postComment " onclick="alert( 'test') " class="postCommentButton ">Post Comment</button>
+    <div class="postCommentButtonSection" id="postCommentButtonSection">
+      <button type="button" name="postComment" onclick="postCommentClicked()" class="postCommentButton">Post Comment</button>
       </div> 
       <hr style="margin: 3% 10% 0 10% ">
 
-      <div class="commentComplete ">
-      <div class="commentAuthor "><strong>Katy Perry</strong>, &emsp; November 18, 2021.</div>
-      <div class="postedComment ">
-      <img src="https://thumbor.forbes.com/thumbor/1950x1950/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ceec355142c500008f42068%2FRihanna-Diamond-Ball-Forbes-Women%2F0x0.jpg%3FcropX1%3D32%26cropX2%3D1982%26cropY1%3D257%26cropY2%3D2207 ">
-      <p>Thanks Jason! This is going to help me get back into the groove of working out after taking a few days off last week.</p>
+      <div class="commentComplete" id="commentComplete">
+      <div class="commentAuthor"><strong>Katy Perry</strong>, &emsp; November 18, 2021.</div>
+      <div class="postedComment">
+      <img src="https://thumbor.forbes.com/thumbor/1950x1950/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ceec355142c500008f42068%2FRihanna-Diamond-Ball-Forbes-Women%2F0x0.jpg%3FcropX1%3D32%26cropX2%3D1982%26cropY1%3D257%26cropY2%3D2207" class="commentImage">
+      <p class="postedCommentText">Thanks Jason! This is going to help me get back into the groove of working out after taking a few days off last week.</p>
       </div>
   </div>
   </div>
@@ -213,6 +213,49 @@
     </address>
     </div>
   </footer>
+
+
+  <script>
+    var clicked = false;
+    var input, person;
+    const d = new Date();
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    function postCommentClicked() {
+      input = document.getElementById("commentSectionTA").value; // get user's input
+
+      if (input.length > 5) { //the comment has to be at least 6 characters
+        if (!clicked){ // making sure one user doesn't leave more than one comment
+          var container = document.getElementById("postCommentSection"); 
+          var section = document.getElementById("commentComplete");
+          var clone = section.cloneNode(true); // making a clone of the already existing comment
+          container.style.height = "550px" //  expanding the space to fit one more comment
+          var section2 = container.appendChild(clone); // adding the clone
+          clone.querySelector('.postedCommentText').innerHTML = input; // replacing the clone's text with our user's input
+          clone.querySelector('.commentImage').src = "https://secure.gravatar.com/avatar/?s=56&d=mm&r=g"; // replacing riri's photo :/
+          clicked = true; // preventing user from clicking twice
+          person = prompt("Please enter your name:", "Jeffery Williams"); // getting user's name
+          if (person.length <= 3) {
+            person = prompt("Name has to be at least 3 characters long:", "Jeffery Williams");
+          }
+          person = makeBold(person) + ", &emsp;" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "."; // concatenating user's name and today's date 
+          clone.querySelector('.commentAuthor').innerHTML = person; // replacing the clone's name and image
+          document.getElementById("commentSectionTA").value = ""; // emptying the textarea up
+        }
+        else {
+          alert("You've already left a comment.")
+        }
+      }
+      else {
+        alert("Make sure you type something if you want to leave a comment.")
+      }
+    }
+
+    function makeBold(s) {
+      return "<strong>" + s + "<strong>";
+    }
+  </script>
+
 </body>
 
 </html>

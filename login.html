@@ -6,33 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStyle.css">
-    <title>Astounding Login Form</title>
+    <title>Login Form - Astounding</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #585858;
-            font-family: 'Arial';
+        html, body {
+            height: 100%;
         }
-        
+
+        .container {
+            font-family: 'Arial';
+            background-image: url("images/bg2.png"), url("images/bg1.jpg");  
+            background-repeat: no-repeat, repeat;
+            background-position: right bottom, left top;  
+            background-origin: content-box, padding-box;            
+            background-size: 8%, auto;        
+            height: 87vh;
+        }
+
         .login {
             width: 382px;
             overflow: hidden;
             margin: auto;
-            margin: 20 0 0 450px;
             padding: 80px;
             background: #303030;
             border-radius: 15px;
         }
         
-        h2 {
+        .container h2 {
             text-align: center;
             color: azure;
             padding: 20px;
+            padding-top: 4em;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
         }
         
         label {
-            color: #949494;
+            color: white;
             font-size: 17px;
         }
         
@@ -73,6 +83,11 @@
             color: azure;
             font-size: 0.8em;
         }
+        
+        footer {
+            margin: 0;
+        }
+
     </style>
 </head>
 
@@ -100,6 +115,7 @@
 
 
     <main>
+        <div class="container">
         <h2>Login</h2><br>
         <div class="login">
             <form id="login" method="get" action="login.php">
@@ -122,6 +138,7 @@
                 <span>Remember me</span>
                 <br><br>
                 <a href="#">Forgot Password</a>
+            </div>
     </main>
 
 
