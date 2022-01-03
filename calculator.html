@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="myStyle.css">
+    <title>Blog posts - Astounding</title>
+</head>
+<style>
+    main {
+        background-image: linear-gradient(120deg, #f5f5f5, #b8b8b8);
+        min-height: 100vh;
+        /* text-align: center; */
+    }
+    
+    .cal {
+        text-align: center;
+        width: 500px;
+        position: absolute;
+        float: left;
+        top: 50%;
+        left: 30%;
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px #408199;
+    }
+    
+    .cal h2 {
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+    }
+    
+    #weight,
+    #height {
+        color: #222f3e;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 200;
+        outline: none;
+        border: none;
+        background: none;
+        border-bottom: 1px solid #341f97;
+        width: 200px;
+    }
+    
+    #weight:focus,
+    #height:focus {
+        border-bottom: 2px solid #341f97;
+    }
+    
+    .text {
+        text-align: left;
+        margin-left: 150px;
+    }
+    
+    #result {
+        color: #341f97;
+    }
+    
+    #btn {
+        font-family: inherit;
+        margin-top: 10px;
+        border: none;
+        color: #fff;
+        background-image: linear-gradient(120deg, #e0cfcf, #b1a9c2);
+        width: 150px;
+        padding: 10px;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    #btn:hover {
+        box-shadow: 1px 1px 10px #341f97;
+    }
+    
+    #info {
+        font-size: 12px;
+        font-family: inherit;
+    }
+    
+    .bmi {
+        text-align: justify;
+        width: 500px;
+        margin: 2%;
+        top: 63%;
+        left: 70%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px #408199;
+        float: left;
+        padding: 2%;
+        background-color: white;
+    }
+    
+    .tbl {
+        border-collapse: collapse;
+        margin: 2%;
+        position: absolute;
+        font-size: 0.9em;
+        min-width: 400px;
+        top: 70%;
+        left: 10%;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 1px 1px 20px #408199;
+        text-align: center;
+    }
+    
+    .tbl thead tr {
+        background-image: url(images/stripe.PNG);
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        font-weight: bold;
+    }
+    
+    .tbl th,
+    .tbl td {
+        padding: 12px 2px;
+    }
+    
+    .tbl tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .tbl tbody tr:nth-of-type(even) {
+        background-color: #b8b8b8;
+    }
+    
+    .tbl tbody tr:last-of-type {
+        border-bottom: 2px ridge #a0a0a0;
+    }
+</style>
+<script type="text/javascript">
+    function BMI() {
+        var h = document.getElementById('height').value;
+        var w = document.getElementById('weight').value;
+        var bmi = w / (h / 100 * h / 100);
+        var bmio = (bmi.toFixed(2));
+        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+
+    }
+</script>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <h1>Astounding</h1>
+                <p>Free PSD Website Template</p>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="calendar.html">CALENDAR</a></li>
+                    <li><a href="calculator.html">BMI CALCULATOR</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="bmi">
+            <h2>What is a BMI Calculator</h2>
+            <p>This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
+            <p>Body mass index (BMI) is a person@appos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
+            <h2>How is BMI used?</h2>
+            <p>BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness measurements,
+                evaluations of diet, physical activity, and family history</p>
+            <h2>Why is BMI used to measure overweight and obesity?</h2>
+            <p>Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to
+                obtain height in meters. </p>
+        </div>
+        <table class="tbl">
+            <thead>
+                <tr>
+                    <th>BMI</th>
+                    <th>Weight Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Below 18.5</td>
+                    <td>Underweight</td>
+                </tr>
+                <tr>
+                    <td>18.5-24.9</td>
+                    <td>Healthy Weight</td>
+                </tr>
+                <tr>
+                    <td>25.0-29.9</td>
+                    <td>Overweight</td>
+                </tr>
+                <tr>
+                    <td>30.0 and Above</td>
+                    <td>Obesity</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cal">
+            <h2>BMI Calculator</h2>
+            <p class="text">Height</p>
+            <input type="text" id="height">
+            <p class="text">Weight</p>
+            <input type="text" id="weight">
+            <p id="result"></p>
+            <button id="btn" onClick="BMI()">Calculate</button>
+            <p id="info">Please enter height in cm and weight in kg</p>
+        </div>
+    </main>
+
+
+
+</body>
+<footer>
+    <table>
+        <form action="post" action="http://www.randyconnolly.com/tests/process.php">
+            <tr>
+                <th>From The Blog</th>
+                <th>Quick Links</th>
+                <th>Latest Tweets</th>
+                <th>Contact Us</th>
+            </tr>
+            <tr rowspan="7">
+                <td>
+                    <p class="postTitle">Post Title</p>
+                    <p class="postUser"><a href="#">Admin</a>, domainname.com</p>
+                    <p class="postUser">Friday, 6th April 2000</p>
+                    <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla.
+                    </p>
+                    <p><a href="#">Read More »</a></p>
+                </td>
+                <td>
+                    <a href="#">» Lorem ipsum dolor sit</a>
+                    <hr class="footer">
+                    <a href="#">» Amet consectetur</a>
+                    <hr>
+                    <a href="#">» Praesent val sem id</a>
+                    <hr>
+                    <a href="#">» Curabitur hendrerit est</a>
+                    <hr>
+                    <a href="#">» Aliquam eget erat nec sapien</a>
+                    <hr>
+                    <a href="#">» Cras id augue nunc</a>
+                    <hr>
+                    <a href="#">» Sed a nulla urna</a>
+                    <hr>
+                </td>
+                <td>
+                    <p><a href="#">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoremut vitae doloreet 1 day ago</p>
+                    <p><a href="#">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoremut vitae doloreet 1 day ago</p>
+                </td>
+                <td>
+                    <input type="text" name="Emri" placeholder="Full Name" size="30">
+                    <input type="email" name="Email" placeholder="Email Address" size="30">
+                    <input type="text" name="Subject" placeholder="Subject" size="30">
+                    <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
+                    <button type="submit" class="rounded" value="Submit">SUBMIT</button>
+                </td>
+            </tr>
+
+    </table>
+    </form>
+    <div class="copyright">
+        <p>Copyright &copy; 2013 Domain Name - All Rights Reserved</small>
+        </p>
+    </div>
+</footer>
+
+</body>
