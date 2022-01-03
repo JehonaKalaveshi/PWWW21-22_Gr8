@@ -7,15 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="myStyle.css">
   <title>Blog posts - Astounding</title>
+
+  <script>
+
+  var clicked = false;
+
+  function buttonClick() {
+    if (!clicked) {
+    var container = document.getElementById("botPosts");
+    var section = document.getElementById("up1");
+    var clone = section.cloneNode(true);
+    clone.id ="up7";
+    clone.querySelector('.imageDesc').innerHTML = "Is Cardio Actually That Important?";
+    var section2 = container.appendChild(clone);
+    section2.style.backgroundImage = "url('images/blogimg10.jpeg')";
+    section2.setAttribute("onclick", "clickPost()");
+    clicked = true;
+    }  
+    else {
+      alert("There are no more posts.")
+    }
+    var button = document.getElementById("viewAllButton");
+    button.style.margin="350px 400px 0 0";
+    button.style.left="200px";
+  }
+
+  function clickPost() {
+    location.href = 'post.html';
+  }
+  </script>
+
 </head>
 
 <body>
     <header>
-        <nav>
-            <div id="logo">
-                <h1>Astounding</h1>
-                <p>Free PSD Website Template</p>
-            </div>
+        <nav><a href="index.html">
+            <div id="logoimg">
+                <!-- <h1>Astounding</h1>
+                <p>Free PSD Website Template</p> -->
+                <!-- <img src="images/logo_white2.png" width="200px" style="margin-top: -15px; margin-left: 50px;"> -->
+            </div></a>
             <div class="navBar">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
@@ -33,65 +64,65 @@
   <main>
     <div class="topPosts">
       <div id="topLeft">
-        <a href="#">
+        <a href="post.html">
           <div id="topPost1">
-            <p>Post title 1</p>
+            <p>11 Ways To Make Your Workouts More Effective</p>
           </div>
         </a>
-        <a href="#">
+        <a href="post.html">
           <div id="topPost2">
-            <p>Post title 2 </p>
+            <p>How to Get Bigger and Stronger: A Top 5 List</p>
           </div>
         </a>
       </div>
 
       <a href="post.html">
         <div id="topPostBig">
-          <p>Post title 3 </p>
+          <p>How to Have a Better Workout Routine</p>
       </a>
     </div>
 
     </div>
 
-    <div class="botPosts">
-      <a href="#">
+    <div class="botPosts" id="botPosts">
+      <a href="post.html">
         <div class="usualPost" id="up1">
-          <p class="imageDesc">Post title 4</p>
+          <p class="imageDesc" id="p1">8 Healthy Habits That Changed My Life</p>
         </div>
       </a>
 
-      <a href="#">
+      <a href="post.html">
         <div class="usualPost" id="up2">
-          <p class="imageDesc">Post title 5</p>
+          <p class="imageDesc">How to Stay in Shape With a Busy Lifestyle</p>
         </div>
       </a>
 
-      <a href="#">
+      <a href="post.html">
         <div class="usualPost" id="up3" style="margin-right:0%;">
-          <p class="imageDesc">Post title 6</p>
+          <p class="imageDesc">Healthy recipes – The tastier, the better!</p>
         </div>
       </a>
 
-      <a href="#">
+      <a href="post.html">
         <div class="usualPost" id="up4">
-          <p class="imageDesc">Post title 7</p>
+          <p class="imageDesc">How to Eat Healthy Without Going Broke</p>
         </div>
       </a>
 
-      <a href="#">
+      <a href="post.html">
         <div class="usualPost" id="up5">
-          <p class="imageDesc">Post title 8</p>
+          <p class="imageDesc">The Best Post Workout Routine</p>
         </div>
       </a>
 
-      <a href="#">
+      <a href="post.html">
         <div class="usualPost" id="up6" style="margin-right:0%;">
-          <p class="imageDesc">Post title 9</p>
+          <p class="imageDesc">How to Avoid Gaining Weight During the Holidays</p>
         </div>
       </a>
     </div>
     <div class="buttonSpace">
-      <button type="button" name="viewAll" class="usualButton" onclick="alert('test')">View all</button>
+      <button type="button" name="viewAll" class="usualButton" id="viewAllButton" onclick="buttonClick()">View all</button>
     </div>
   </main>
 

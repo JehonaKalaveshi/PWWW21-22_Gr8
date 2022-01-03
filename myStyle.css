@@ -54,6 +54,24 @@ header nav ul li {
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+#logoimg {
+    width: 12.5em;
+    /* margin-top: 1.2em; */
+    margin-top: 0.5em;
+    margin-left: 3em;
+    position: relative;
+    float: left;
+    background-image: url("images/logo_white.png");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    height:100px;
+    transition: 0.5s;
+}
+
+#logoimg:hover {
+    background-image: url("images/logo.png");
+}
+
 .navBar {
     height: 100px;
     /* margin-top: 2em; */
@@ -574,6 +592,10 @@ a:-webkit-any-link {
 .postContent h1 {
     color: #40aed7;
     font-size: 1.7em;
+}
+
+.postContent video {
+    width: 100%;
 }
 
 .postCommentSection {
