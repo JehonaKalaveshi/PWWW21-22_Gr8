@@ -27,7 +27,7 @@
         
         h2 {
             text-align: center;
-            color: #949494;
+            color: azure;
             padding: 20px;
         }
         
@@ -68,9 +68,10 @@
             font-size: 17px;
         }
         
-        a {
+        main a {
             float: right;
-            background-color: grey;
+            color: azure;
+            font-size: 0.8em;
         }
     </style>
 </head>
@@ -97,20 +98,22 @@
 
 
     <main>
-        <h2>Login Page</h2><br>
+        <h2>Login</h2><br>
         <div class="login">
             <form id="login" method="get" action="login.php">
                 <label><b>User Name     
-            </b>    
+            </b>  
+            <br>  
             </label>
                 <input type="text" name="Uname" id="Uname" placeholder="Username">
                 <br><br>
                 <label><b>Password     
-            </b>    
+            </b> 
+            <br>   
             </label>
                 <input type="Password" name="Pass" id="Pass" placeholder="Password">
                 <br><br>
-                <input type="button" name="log" id="log" value="Log In Here">
+                <input type="button" name="log" id="log" value="Log In">
                 <br><br>
                 <input type="checkbox" id="check">
                 <span>Remember me</span>
@@ -169,8 +172,9 @@
         </table>
         </form>
         <div class="copyright">
-            <p>Copyright &copy; 2013 Domain Name - All Rights Reserved</small>
-            </p>
+            <address>
+                <p>Copyright &copy; 2013 Domain Name - All Rights Reserved</small></p>
+            </address>
         </div>
     </footer>
 
