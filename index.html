@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStyle.css">
     <title>Astounding</title>
+    <script src="jQuery/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".tweets").click(function(){
+                $(".user").animate( {height: 'toggle'});
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -106,7 +114,7 @@
             <tr>
                 <th>From The Blog</th>
                 <th>Quick Links</th>
-                <th>Latest Tweets</th>
+                <th class="tweets">Latest Tweets</th>
                 <th>Contact Us</th>
             </tr>
             <tr rowspan="7">
@@ -135,8 +143,8 @@
                     <hr>
                 </td>
                 <td>
-                    <p><a href="#">@hannahmorgan</a> I really love this gym. The trainers are the best, they are always there to help you and guide you to be your best self. 18 hours ago</p>
-                    <p><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
+                    <p class="user"><a href="#">@hannahmorgan</a> I really love this gym. The trainers are the best, they are always there to help you and guide you to be your best self. 18 hours ago</p>
+                    <p class="user"><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                 </td>
                 <td>
                     <input type="text" name="Emri" placeholder="Full Name" size="30">
