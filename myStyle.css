@@ -685,9 +685,6 @@ a:-webkit-any-link {
 
 /* Calendar */
 
-
-/* Calendar */
-
 .month {
     text-align: justify;
     width: 40%;
@@ -757,6 +754,7 @@ h3 {
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
     margin: 4px 2px;
+    margin-left: 9.375em;
     transition-duration: 0.4s;
     cursor: pointer;
     justify-content: center;

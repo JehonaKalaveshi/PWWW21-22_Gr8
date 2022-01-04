@@ -34,8 +34,8 @@
         </nav>
     </header>
     <main>
-        <div class="month">
-            <h1>The January 2022 Workout Calendar</h1>
+        <div class="month" id="month">
+            <h1>The Month 2022 Workout Calendar</h1>
             <a href="https://www.facebook.com"> <img src="images/facebook.png" width=40px alt="Facebook"></a>
             <a href="https://www.instagram.com"><img src="images/instagram.png" width=40px alt="Instagram"></a>
             <a href="https://www.twitter.com"><img src="images/twitter.png" width=40px alt="Twitter"></a>
@@ -45,7 +45,7 @@
                 others. It also includes the 2022 Glow Up Sessions! Basically, this is a 14-day challenge where we&apos;ll get into the best shape of our lives, mentally and physically. Not a bad way to start a new year, right?
             </p>
 
-            <button class="theButton">Click to view this months calendar</button>
+            <button class="theButton" onclick="location.href='images/january.jpg'">Click to view this months calendar</button>
             <h3>How to follow the Calendar</h3>
             <p>
                 From January 3 to 9, I&apos;ll be doing one of the workouts from the calendar each day with you LIVE on IG. So make sure you&apos;re following us to join in!<br> Otherwise, check the Youtube playlists to find all of the videos you need
@@ -72,14 +72,24 @@
                 workout videos in one place! Plus, you get that “workout complete” checkmark, which is sooo satisfying. <br> If you&apos;re just getting started or want to ease into working out, my Beginner&apos;s Calendar is a great place to start! It&apos;s
                 a free 4-week program to get you stronger so that you can join in on the monthlies when you are ready. <br> Do you have a New Year&apos;s resolution? If yes, tell me what it is in the comments! <br>
             </p>
+            <p id="res"></p>
         </div>
 
+        <script type="text/javascript">
+            let text = document.getElementById("month").innerHTML;
+            let pattern = /Month/i
+            let result = pattern.test(text);
 
+            if (result === true) {
+                let output = text.replace(pattern, "January");
+                document.getElementById("month").innerHTML = output;
+            }
+        </script>
         <div class="signUp">
             <h2>Subscribe to our package</h2>
             <img src="images/calendar.png" alt="Workout Calendar">
             <div id="error"></div>
-            <form id="logIn" method="get" action="http://www.randyconnolly.com/tests/process.php" onsubmit="return validateForm()">
+            <form id="logIn" name="myForm" method="post" action="http://www.randyconnolly.com/tests/process.php" onsubmit="return validateForm()">
                 <p>Do you want to subscribe to our package program? </p>
                 <input type="text" id="name" name="name" placeholder="Full Name" size="30">
                 <input type="email" id="eamil" name="email" placeholder="Email Address" size="30">
@@ -134,10 +144,10 @@
                         <p><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                     </td>
                     <td>
-                        <input type="text" name="Emri" placeholder="Full Name" size="30">
-                        <input type="email" name="Email" placeholder="Email Address" size="30">
-                        <input type="text" name="Subject" placeholder="Subject" size="30">
-                        <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
+                        <input type="text" name="Emri" placeholder="Full Name" size="30" required>
+                        <input type="email" name="Email" placeholder="Email Address" size="30" required>
+                        <input type="text" name="Subject" placeholder="Subject" size="30" required>
+                        <textarea name="Message" rows="4" cols="29" placeholder="Message" required></textarea><br>
                         <button type="submit" class="rounded" value="Submit">SUBMIT</button>
                     </td>
                 </tr>

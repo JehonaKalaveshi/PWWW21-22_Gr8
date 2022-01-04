@@ -91,6 +91,7 @@ window.onload = function() {
             <p id="nation"></p>
             <p id="age"></p>
             <p id="eyeC"></p>
+            <p id="initial"></p>
         </div>
         <p id="moreInfo">Cassey is on a mission to spread the joy of fitness! With over 10 million subscribers across all platforms, Cassey&apos;s upbeat personality and genuine care for his students is what makes him an award-winning fitness instructor. He has been teaching
             his signature format, POP Pilates, for over 14 years and has certified thousands of instructors to teach the unique class in gyms across the world, with over 4,000 live in-studio classes being taught every month. Cassey&apos;s workouts have
@@ -122,6 +123,8 @@ window.onload = function() {
             let text = document.getElementById("moreInfo").innerHTML;
             let result = text.replace(/Cassey/g, "Jason");
             document.getElementById("moreInfo").innerHTML = result;
+            let init = text.match(/J/g);
+            document.getElementById("initial").innerHTML = init;
         </script>
     </main>
 
@@ -164,10 +167,10 @@ window.onload = function() {
                         <p><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                     </td>
                     <td>
-                        <input type="text" name="Emri" placeholder="Full Name" size="30">
-                        <input type="email" name="Email" placeholder="Email Address" size="30">
-                        <input type="text" name="Subject" placeholder="Subject" size="30">
-                        <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
+                        <input type="text" name="Emri" placeholder="Full Name" size="30" required>
+                        <input type="email" name="Email" placeholder="Email Address" size="30" required>
+                        <input type="text" name="Subject" placeholder="Subject" size="30" required>
+                        <textarea name="Message" rows="4" cols="29" placeholder="Message" required></textarea><br>
                         <button type="submit" class="rounded" value="Submit">SUBMIT</button>
                     </td>
                 </tr>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="astounding.appcache">
 
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,12 @@
     <title>Astounding</title>
     <script src="jQuery/jquery-3.6.0.js"></script>
     <script>
+
         $(document).ready(function(){
             //Animation when you click on Latest Tweets
             $(".tweets").click(function(){
                 $(".user").animate( {height: 'toggle'});
+
             });
     //When you click the user you get the text and set the text to "No more tweets."        
     $(".user").click(() => {
@@ -95,7 +97,7 @@
                 <img src="images/team1.jpg" alt="Person 1" width="300">
                 <figcaption>Jason Regalado</figcaption>
                 <hr>
-                <p>Jason is the Co-Founder and CEO of our company. He will do anything to make your dream body come true<br><a href="staff1.html">View Profile »</a>
+                <p>Jason is the Co-Founder and <abbr title="Chief Excecutive Officer">CEO</abbr> of our company. He will do anything to make your dream body come true<br><a href="staff1.html">View Profile »</a>
                 </p>
             </div>
             <div class="teamMember">
@@ -125,7 +127,7 @@
 
 <footer>
     <table>
-        <form action="post" action="http://www.randyconnolly.com/tests/process.php">
+        <form method="post" action="http://www.randyconnolly.com/tests/process.php">
             <tr>
                 <th class="blog">From The Blog</th>
                 <th>Quick Links</th>
@@ -162,10 +164,10 @@
                     <p class="user"><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                 </td>
                 <td>
-                    <input type="text" name="Emri" placeholder="Full Name" size="30">
-                    <input type="email" name="Email" placeholder="Email Address" size="30">
-                    <input type="text" name="Subject" placeholder="Subject" size="30">
-                    <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
+                    <input type="text" name="Emri" placeholder="Full Name" size="30" required>
+                    <input type="email" name="Email" placeholder="Email Address" size="30" required>
+                    <input type="text" name="Subject" placeholder="Subject" size="30" required>
+                    <textarea name="Message" rows="4" cols="29" placeholder="Message" required></textarea ><br>
                     <button type="submit" class="rounded" value="Submit">SUBMIT</button>
                 </td>
             </tr>
