@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="myScript.js">
     <title>Blog posts - Astounding</title>
 </head>
 
@@ -75,10 +76,11 @@
         <div class="signUp">
             <h2>Subscribe to our package</h2>
             <img src="images/calendar.png" alt="Workout Calendar">
-            <form class="logIn" action="post" action="http://www.randyconnolly.com/tests/process.php">
+            <div id="error"></div>
+            <form class="logIn" action="post" action="http://www.randyconnolly.com/tests/process.php" onsubmit="return validateForm()">
                 <p>Do you want to subscribe to our package program? </p>
-                <input type="text" name="Name" placeholder="Full Name" size="30">
-                <input type="email" name="Email" placeholder="Email Address" size="30">
+                <input type="text" name="name" placeholder="Full Name" size="30">
+                <input type="email" name="email" placeholder="Email Address" size="30">
                 <button type="submit" class="rounded" value="Submit" style="font-family: 'Times New Roman', Times, serif;">SUBMIT</button>
             </form>
         </div>
@@ -93,7 +95,7 @@
     </main>
     <footer>
         <table>
-            <form action="post" action="http://www.randyconnolly.com/tests/process.php">
+            <form action="post" action="http://www.randyconnolly.com/tests/process.php" method="get">
                 <tr>
                     <th>From The Blog</th>
                     <th>Quick Links</th>
