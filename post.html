@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="myStyle.css">
     <script type="text/javascript" src="myScript.js"></script>
     <title>How to Have a Better Workout Routine - Astounding</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">    
 </head>
 
 <body>
@@ -147,11 +148,11 @@
         <hr style="margin: 3% 10% 0 10% ">
 
         <div class="commentComplete" id="commentComplete">
-            <div class="commentAuthor"><strong>&Ccedil;am&#235;rie &#203; Sara&ccedil;i</strong>, &emsp; November 18, 2021.</div>
+            <div class="commentAuthor" id="commentAuthor"></div>
             <div class="postedComment">
                 <img src="https://thumbor.forbes.com/thumbor/1950x1950/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5ceec355142c500008f42068%2FRihanna-Diamond-Ball-Forbes-Women%2F0x0.jpg%3FcropX1%3D32%26cropX2%3D1982%26cropY1%3D257%26cropY2%3D2207"
                     class="commentImage">
-                <p class="postedCommentText">Thanks Jason! This is going to help me get back into the groove of working out after taking a few days off last week.</p>
+                <p class="postedCommentText" id="postedCommentText"></p>
             </div>
         </div>
     </div>
@@ -225,10 +226,23 @@
         const d = new Date();
         const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+        const commenter = {
+            name: "&Ccedil;am&#235;rie &#203; Sara&ccedil;i",
+            date: "November 18, 2021",
+            comment: "Thanks Jason! This is going to help me get back into the groove of working out after taking a few days off last week."
+        };        
+
         reminder();
 
         checkComment();
 
+        firstComment();
+
+
+        function firstComment() {
+            document.getElementById("commentAuthor").innerHTML = "<strong>" + commenter.name + "</strong>, &emsp; <u>" + commenter.date + ".</u>";
+            document.getElementById("postedCommentText").innerHTML = commenter.comment;
+        }
 
         function reminder() {            
 
@@ -250,7 +264,7 @@
                 var section2 = container.appendChild(clone); 
                 clone.querySelector('.postedCommentText').innerHTML = localStorage.getItem("comment"); 
                 clone.querySelector('.commentImage').src = "https://secure.gravatar.com/avatar/?s=56&d=mm&r=g";
-                var person = makeBold(localStorage.getItem("name")) + ", &emsp;" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + ".";
+                var person = makeBold(localStorage.getItem("name")) + ", &emsp;" + "<u>" + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "<u>.";
                 clone.querySelector('.commentAuthor').innerHTML = person;
             }
         }
@@ -294,9 +308,6 @@
         }
 
 
-        ////////////////////////////////////////////////
-        // localStorage and sessionStorage
-        // localStorage.setItem("title", "")
 
     </script>
 
