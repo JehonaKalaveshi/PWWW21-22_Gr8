@@ -14,7 +14,9 @@ staff1.html
 staff2.html
 staff3.html
 staff4.html
- 
+service.html
+gameController.html
+
 # styles & scripts
 myStyle.css
 myScript.js
@@ -78,7 +80,19 @@ images/twitter.png
 images/video1.mp4
 images/water.png
 images/weight.png
-
+images/molla.svg
+images/mollawhite.svg
+images/award1.png
+images/award2.png
+images/award3.png
+images/award4.png
+images/award5.png
+images/award6.png
+images/favicon.png
+images/water.png
+images/weight.png
+images/trainer.svg
+images/january.jpg
 
 NETWORK:
 

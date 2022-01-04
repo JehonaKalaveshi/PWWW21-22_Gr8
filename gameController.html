@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Game - Astounding</title>
 <style>
 canvas {
     border:1px solid #4CAF50;
@@ -22,11 +23,25 @@ button:hover {
 
 }
 
+body {
+    width: 50%;
+    margin-left: 25%;
+    background-color: #acacac;
+}
+
 a{
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     color: #4CAF50;
+}
+
+.mainDiv {
+    margin-left: 23%;
+}
+
+p {
+    font-size: 1.5em;
 }
 </style>
 </head>
@@ -160,14 +175,15 @@ function clearmove() {
     myGamePiece.speedY = 0; 
 }
 </script>
-<div style="text-align:center;width:480px;">
+<div class = "mainDiv" style="text-align:center;width:480px;">
   <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">↑</button><br><br>
   <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">←</button>
   <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">→</button><br><br>
   <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">↓</button>
-</div>
 
-<p>In order to play ypu have to click on the buttons. For faster movement click the same button more than once.</p>
-<a href="index.html"><b> GET BACK TO OUR MAIN PAGE</b></a>
+
+<p>In order to play you have to click on the buttons. For faster movement click the same button more than once.</p>
+<a href="index.html"><b>BACK TO MAIN PAGE</b></a>
+</div>
 </body>
 </html>

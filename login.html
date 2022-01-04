@@ -163,14 +163,14 @@
             </b>  
             <br>  
             </label>
-                <input type="text" name="Uname" id="Uname" placeholder="Username" pattern="[A-Za-z]">
+                <input type="text" name="Uname" id="Uname" placeholder="Username" pattern="[A-Za-z]" required>
                 <br><br>
                 <label><b>Password     
             </b> 
             <br>   
             </label>
                 <keygen name="rsaPublicKey" keytype="RSA">
-                <input type="Password" name="Pass" id="Pass" placeholder="Password">
+                <input type="Password" name="Pass" id="Pass" placeholder="Password" required>
                 <br><br>
                 <p style="color: azure;">Prove you're not a robot by dragging the picture:</p>
 
@@ -182,7 +182,7 @@
                 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
                 <br>
-                <input list="answers" name="answer" id="answer" placeholder="What is 2+4?" style="border-radius:25px;">
+                <input list="answers" name="answer" id="answer" placeholder="What is 2+4?" style="border-radius:25px;" required>
 
                 <datalist id="answers">
                     <option value="5">
