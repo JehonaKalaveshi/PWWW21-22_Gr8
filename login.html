@@ -6,43 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStyle.css">
-    <title>Login Form - Astounding</title>
+    <title>Login - Astounding</title>
     <style>
-        html, body {
-            height: 100%;
-        }
-
-        .container {
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #585858;
             font-family: 'Arial';
-            background-image: url("images/bg2.png"), url("images/bg1.jpg");  
-            background-repeat: no-repeat, repeat;
-            background-position: right bottom, left top;  
-            background-origin: content-box, padding-box;            
-            background-size: 8%, auto;        
-            height: 87vh;
         }
-
+        
         .login {
             width: 382px;
             overflow: hidden;
             margin: auto;
+            margin: 20 0 0 450px;
             padding: 80px;
             background: #303030;
             border-radius: 15px;
         }
         
-        .container h2 {
+        h2 {
             text-align: center;
             color: azure;
             padding: 20px;
-            padding-top: 4em;
-            text-transform: uppercase;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 2em;
         }
         
         label {
-            color: white;
+            color: #949494;
             font-size: 17px;
         }
         
@@ -72,6 +62,15 @@
             font-weight: bold;
             background-color: #949494;
         }
+
+        #div1, #div2 {
+  float: left;
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
         
         span {
             color: white;
@@ -83,12 +82,23 @@
             color: azure;
             font-size: 0.8em;
         }
-        
-        footer {
-            margin: 0;
-        }
-
     </style>
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        
+        </script>
 </head>
 
 <body>
@@ -115,8 +125,25 @@
 
 
     <main>
-        <div class="container">
-        <h2>Login</h2><br>
+        <canvas id="myCanvas" width="250" height="100"></canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext('2d');
+            ctx.shadowColor = "rgb(190, 190, 190)";
+            
+            ctx.font = "50px arial";
+            var gradient = ctx.createLinearGradient(0, 0, 200, 175);
+            gradient.addColorStop(0, "rgb(255, 255, 255)");
+            gradient.addColorStop(1, "#55a630");
+            ctx.fillStyle = gradient;
+            ctx.fillText("Login", 110, 70);
+            ctx.fillStyle = "#aacc00";
+            ctx.beginPath();
+            ctx.moveTo(75, 50);
+            ctx.lineTo(100, 75);
+            ctx.lineTo(100, 25);
+            ctx.fill();
+        </script>
         <div class="login">
             <form id="login" method="get" action="login.php">
                 <label><b>User Name     
@@ -132,13 +159,20 @@
                 <keygen name="rsaPublicKey" keytype="RSA">
                 <input type="Password" name="Pass" id="Pass" placeholder="Password">
                 <br><br>
+                <p style="color: azure;">Prove you're not a robot by dragging the picture:</p> 
+                
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img src="images/logo_white.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+                  </div>
+                  
+                  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <br><br>
                 <input type="button" name="log" id="log" value="Log In">
                 <br><br>
                 <input type="checkbox" id="check">
                 <span>Remember me</span>
                 <br><br>
                 <a href="#">Forgot Password</a>
-            </div>
     </main>
 
 
@@ -153,38 +187,37 @@
                 </tr>
                 <tr rowspan="7">
                     <td>
-                        <p class="postTitle">Post Title</p>
-                        <p class="postUser"><a href="#">Admin</a>, domainname.com</p>
-                        <p class="postUser">Friday, 6th April 2000</p>
-                        <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla.
-                        </p>
-                        <p><a href="#">Read More »</a></p>
+                        <p class="postTitle">How to have a better workout routine?</p>
+                        <p class="postUser"><a href="#">Jason</a>, jason@trainer.com</p>
+                        <p class="postUser">Thursday, 12th November 2021</p>
+                        <p>Lately, for me, it’s all been about self care. I’m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that means taking care of myself                        </p>
+                        <p><a href="post.html">Read More »</a></p>
                     </td>
                     <td>
-                        <a href="#">» Lorem ipsum dolor sit</a>
-                        <hr class="footer">
-                        <a href="#">» Amet consectetur</a>
-                        <hr>
-                        <a href="#">» Praesent val sem id</a>
-                        <hr>
-                        <a href="#">» Curabitur hendrerit est</a>
-                        <hr>
-                        <a href="#">» Aliquam eget erat nec sapien</a>
-                        <hr>
-                        <a href="#">» Cras id augue nunc</a>
-                        <hr>
-                        <a href="#">» Sed a nulla urna</a>
-                        <hr>
+                        <a href="podcasts.html">» Podcasts</a>
+                    <hr class="footer">
+                    <a href="blog.html">» Blogs</a>
+                    <hr>
+                    <a href="calculator.html">» BMI Calculator</a>
+                    <hr>
+                    <a href="calendar.html">» Calendar</a>
+                    <hr>
+                    <a href="login.html">» Login</a>
+                    <hr>
+                    <a href="index.html">» Home page</a>
+                    <hr>
+                    <a href="about.html">» About us</a>
+                    <hr>
                     </td>
-                    <td style="margin-top: -100%;">
-                        <p><a href="#">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoremut vitae doloreet 1 day ago</p>
-                        <p><a href="#">@namehere</a> Justoid nonummy laoreet phasellent penatoque in antesque pellus elis eget tincidunt. Nequatdui laorem justo a non tellus laoremut vitae doloreet 1 day ago</p>
+                    <td>
+                        <p><a href="#">@hannahmorgan</a> I really love this gym. The trainers are the best, they are always there to help you and guide you to be your best self. 18 hours ago</p>
+                        <p><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                     </td>
                     <td>
                         <input type="text" name="Emri" placeholder="Full Name" size="30">
                         <input type="email" name="Email" placeholder="Email Address" size="30">
                         <input type="text" name="Subject" placeholder="Subject" size="30">
-                        <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea>
+                        <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
                         <button type="submit" class="rounded" value="Submit">SUBMIT</button>
                     </td>
                 </tr>
@@ -193,10 +226,11 @@
         </form>
         <div class="copyright">
             <address>
-                <p>Copyright &copy; 2013 Domain Name - All Rights Reserved</small></p>
-            </address>
+        <p>Copyright &copy; 2013 Domain Name - All Rights Reserved</small></p>
+    </address>
         </div>
     </footer>
+
 
 
 </body>
