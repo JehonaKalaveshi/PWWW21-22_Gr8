@@ -1,18 +1,38 @@
-const name = document.getElementById('name');
-const email = document.getElementById('email');
+const formName = document.getElementById('name');
+const formEmail = document.getElementById('email');
 const form = document.getElementById('logIn');
-const errorElement = document.getElement
+const errorElement = document.getElement('error')
 form.addEventListener('submit', (e) => {
-        let messages = []
-        if (name.value === "" || name.value == null) {
-            aler('Name is required!')
-        }
-        if (messages.length > 0) {
-            e.preventDefault()
-            errorElement.innerText = messages.join(',')
-        }
-    })
-    // Web worker for counting time 
+    let messages = [];
+    if (formName.value === "" || formName.value === null) {
+        alert('Name is required!');
+
+    }
+    if (messages.length > 0) {
+        e.preventDefault();
+        errorElement.innerText = messages.join(',');
+    }
+});
+
+////////////////////////////////////////////////////
+
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     checkInputs();
+// });
+
+// function checkInputs() {
+//     const nameValue = formName.value.trim();
+//     const emailValue = formEmail.value.trim();
+
+//     if (nameValue === '') {
+//         setErrorFor(formName, 'Username cannot be blank');
+//     } else {
+//         setSuccessFor(formName);
+//     }
+// }
+// Web worker for counting time 
 var w;
 
 function startWorker() {

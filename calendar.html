@@ -5,12 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="myStyle.css"> HEAD
-    <link rel="stylesheet" href="myScript.js">
-    <title>Blog posts - Astounding</title>
-    =======
-    <title>Calendar - Astounding</title>
+    <link rel="stylesheet" href="myStyle.css">
 
+    <title>Blog posts - Astounding</title>
+    <title>Calendar - Astounding</title>
+    <script defer src="myScript.js"></script>
 </head>
 
 <body>
@@ -80,11 +79,11 @@
             <h2>Subscribe to our package</h2>
             <img src="images/calendar.png" alt="Workout Calendar">
             <div id="error"></div>
-            <form class="logIn" action="post" action="http://www.randyconnolly.com/tests/process.php" onsubmit="return validateForm()">
+            <form id="logIn" method="get" action="http://www.randyconnolly.com/tests/process.php" onsubmit="return validateForm()">
                 <p>Do you want to subscribe to our package program? </p>
-                <input type="text" name="name" placeholder="Full Name" size="30">
-                <input type="email" name="email" placeholder="Email Address" size="30">
-                <button type="submit" class="rounded" value="Submit" style="font-family: 'Times New Roman', Times, serif;">SUBMIT</button>
+                <input type="text" id="name" name="name" placeholder="Full Name" size="30">
+                <input type="email" id="eamil" name="email" placeholder="Email Address" size="30">
+                <button id="sumbit" type="submit" value="Submit" style="font-family: 'Times New Roman', Times, serif;">SUBMIT</button>
             </form>
         </div>
 
@@ -98,7 +97,7 @@
     </main>
     <footer>
         <table>
-            <form action="post" action="http://www.randyconnolly.com/tests/process.php" method="get">
+            <form method="get" action="http://www.randyconnolly.com/tests/process.php">
                 <tr>
                     <th>From The Blog</th>
                     <th>Quick Links</th>
@@ -110,8 +109,8 @@
                         <p class="postTitle">How to have a better workout routine?</p>
                         <p class="postUser"><a href="#">Jason</a>, jason@trainer.com</p>
                         <p class="postUser">Thursday, 12th November 2021</p>
-                        <p>Lately, for me, it’s all been about self care. I’m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that means taking
-                            care of myself </p>
+                        <p>Lately, for me, it&apos;s all been about self care. I&apos;m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that
+                            means taking care of myself </p>
                         <p><a href="post.html">Read More »</a></p>
                     </td>
                     <td>

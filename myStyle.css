@@ -336,11 +336,11 @@ textarea {
 
 /* End of the footer */
 
-
 @font-face {
     font-family: "KG Red Hands";
     src: url("images/KGRedHands.ttf");
-  }
+}
+
 
 /* Responsiveness */
 
@@ -615,7 +615,7 @@ a:-webkit-any-link {
     height: 400px;
     /* border-top: 2px #40aed7 dashed; */
     padding-bottom: 5em;
-    border: 5px solid transparent;    
+    border: 5px solid transparent;
     border-image: url("images/borderimg.png") 30 stretch;
 }
 
@@ -788,7 +788,7 @@ h3 {
     margin: 2%;
 }
 
-.logIn input,
+#logIn input,
 email {
     display: inline-block;
     width: 14em;
@@ -799,7 +799,7 @@ email {
     margin-bottom: 0.5em;
 }
 
-.logIn sumbit {
+.signUp button {
     text-align: center;
     background-color: #47b1d8;
     width: 14em;
@@ -811,7 +811,7 @@ email {
     margin-bottom: 0.5em;
 }
 
-.logIn submit:hover {
+.signUp button:hover {
     transition-duration: 0.4s;
     box-shadow: 5px 10px 8px #888888;
 }

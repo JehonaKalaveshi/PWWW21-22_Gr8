@@ -2,40 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStyle.css">
-    <title>Blog posts - Astounding</title>
-
-    <script>
-        var clicked = false;
-
-        function buttonClick() {
-            if (!clicked) {
-                var container = document.getElementById("botPosts");
-                var section = document.getElementById("up1");
-                var clone = section.cloneNode(true);
-                clone.id = "up7";
-                clone.querySelector('.imageDesc').innerHTML = "Is Cardio Actually That Important?";
-                var section2 = container.appendChild(clone);
-                section2.style.backgroundImage = "url('images/blogimg10.jpeg')";
-                section2.setAttribute("onclick", "clickPost()");
-                clicked = true;
-            } else {
-                alert("There are no more posts.")
-            }
-            var button = document.getElementById("viewAllButton");
-            button.style.margin = "350px 400px 0 0";
-            button.style.left = "200px";
-        }
-
-        function clickPost() {
-            location.href = 'post.html';
-        }
-    </script>
-
+    <title>Astounding</title>
 </head>
+<style>
+    main img {
+        width: 400px;
+        border: 2px ridge #333;
+        border-radius: 5px;
+        box-shadow: 1px 1px 20px #408194;
+        text-align: center;
+        float: left;
+        margin: 2%;
+    }
+    
+    .person {
+        /* width: 900px; */
+        border-radius: 5px;
+        border: 1px dotted #333;
+        box-shadow: 1px 1px 20px #408194;
+        /* display: inline-block; */
+        text-align: justify;
+        margin: 2%;
+        padding: 2%;
+        float: left;
+    }
+    
+    #moreInfo {
+        width: 900px;
+        border-radius: 5px;
+        border: 1px dotted #333;
+        box-shadow: 1px 1px 20px #408194;
+        /* display: inline-block; */
+        text-align: justify;
+        margin: 2%;
+        padding: 2%;
+        float: right;
+    }
+</style>
+
 
 <body>
     <header>
@@ -59,74 +67,48 @@
             </div>
         </nav>
     </header>
-
-
     <main>
-        <div class="topPosts">
-            <div id="topLeft">
-                <a href="post.html">
-                    <div id="topPost1">
-                        <p>Make your Workouts More Effective</p>
-                    </div>
-                </a>
-                <a href="post.html">
-                    <div id="topPost2">
-                        <p>How to Get Bigger and Stronger: A Top 5 List</p>
-                    </div>
-                </a>
-            </div>
 
-            <a href="post.html">
-                <div id="topPostBig">
-                    <p>How to Have a Better Workout Routine</p>
-            </a>
-            </div>
-
+        <img src="images/team1.jpg" alt="Jason Reagalado">
+        <div class="person">
+            <h1>Team Member 1</h1>
+            <p id="identity"></p>
+            <p id="nation"></p>
+            <p id="age"></p>
+            <p id="eyeC"></p>
         </div>
+        <p id="moreInfo">Cassey is on a mission to spread the joy of fitness! With over 10 million subscribers across all platforms, Cassey&apos;s upbeat personality and genuine care for his students is what makes him an award-winning fitness instructor. He has been teaching
+            his signature format, POP Pilates, for over 14 years and has certified thousands of instructors to teach the unique class in gyms across the world, with over 4,000 live in-studio classes being taught every month. Cassey&apos;s workouts have
+            inspired millions of young people to get into the best shape of their lives, mentally and physically and now can be found in his top-rated mobile app. Cassey&apos;s passion for bringing joy into all facets of fitness is what led him to launch
+            POPFLEX, a now beloved cult activewear brand, where he is the CEO and Lead Designer.</p>
 
-        <div class="botPosts" id="botPosts">
-            <a href="post.html">
-                <div class="usualPost" id="up1">
-                    <p class="imageDesc" id="p1">8 Healthy Habits That Changed My Life</p>
-                </div>
-            </a>
-
-            <a href="post.html">
-                <div class="usualPost" id="up2">
-                    <p class="imageDesc">How to Stay in Shape With a Busy Lifestyle</p>
-                </div>
-            </a>
-
-            <a href="post.html">
-                <div class="usualPost" id="up3" style="margin-right:0%;">
-                    <p class="imageDesc">Healthy recipes – The tastier, the better!</p>
-                </div>
-            </a>
-
-            <a href="post.html">
-                <div class="usualPost" id="up4">
-                    <p class="imageDesc">How to Eat Healthy Without Going Broke</p>
-                </div>
-            </a>
-
-            <a href="post.html">
-                <div class="usualPost" id="up5">
-                    <p class="imageDesc">The Best Post Workout Routine</p>
-                </div>
-            </a>
-
-            <a href="post.html">
-                <div class="usualPost" id="up6" style="margin-right:0%;">
-                    <p class="imageDesc">How to Avoid Gaining Weight During the Holidays</p>
-                </div>
-            </a>
-        </div>
-        <div class="buttonSpace">
-            <button type="button" name="viewAll" class="usualButton" id="viewAllButton" onclick="buttonClick()">View all</button>
-        </div>
+        <script type="text/javascript">
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+            Person.prototype.name = function() {
+                return this.firstName + " " + this.lastName
+            };
+            Person.prototype.nationality = "Spanish";
+            Person.prototype.age = function() {
+                return this.age
+            };
+            Person.prototype.eyeColor = function() {
+                return this.eyeColor
+            };
+            const jason = new Person("Jason", "Regalado", 31, "green")
+            document.getElementById("identity").innerHTML = "Name: " + jason.name()
+            document.getElementById("nation").innerHTML = "Nationality: " + jason.nationality;
+            document.getElementById("age").innerHTML = "Age: " + jason.age;
+            document.getElementById("eyeC").innerHTML = "Eye Color: " + jason.eyeColor;
+            let text = document.getElementById("moreInfo").innerHTML;
+            let result = text.replace(/Cassey/g, "Jason");
+            document.getElementById("moreInfo").innerHTML = result;
+        </script>
     </main>
-
-
 
     <footer>
         <table>
@@ -183,6 +165,6 @@
     </address>
         </div>
     </footer>
-</body>
+
 
 </html>
