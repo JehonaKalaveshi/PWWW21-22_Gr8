@@ -116,6 +116,7 @@
         overflow: hidden;
         box-shadow: 1px 1px 20px #408199;
         text-align: center;
+        resize: horizontal;
     }
     
     .tbl thead tr {
@@ -151,37 +152,55 @@
     function BMI() {
         var h = document.getElementById('height').value;
         var w = document.getElementById('weight').value;
-        // var bmi = w / (h / 100 * h / 100);
-        var bmi = w / Math.pow((h / 100), 2);
+
+        var bmi = Math.abs(w / Math.pow((h / 100), 2));
         var bmio = (bmi.toFixed(2));
-        try {
-            if (h == null || h == '' || w == null || w == '') {
-                window.alert("Please put a valid weight and height");
-                document.getElementById("result").innerHTML = "Your BMI is " + NaN;
-            } else {
-                document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+        var bmioVal = Math.abs(parseInt(bmio));
+        if (h > 0 && h < Number.MAX_VALUE) {
+            try {
+                if (h == null || h == '' || w == null || w == '') {
+                    window.alert("Please put a valid weight and height");
+                    document.getElementById("result").innerHTML = "Your BMI is " + NaN;
+                } else {
+                    if (bmioVal < 18.5) {
+                        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+                        document.getElementById("morers").innerHTML = "You are underweight";
+                        document.getElementById("morers").style.color = "#C5DA2E";
+                    } else if (bmioVal => 18.5 && bmioVal <= 24.9) {
+                        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+                        document.getElementById("morers").innerHTML = "You have a healthy weight";
+                        document.getElementById("morers").style.color = "#279346";
+                    } else if (bmioVal => 25.0 && bmioVal <= 29.9) {
+                        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+                        document.getElementById("morers").innerHTML = "Be careful you are overweight";
+                        document.getElementById("morers").style.color = "#F37B06";
+                    } else if (bmioVal => 30.0) {
+                        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+                        document.getElementById("morers").innerHTML = "Be careful you are obese";
+                        document.getElementById("morers").style.color = "#F31506";
+                    }
+                }
+            } catch (err) {
+                window.alert("There has been a mistake!");
             }
-        } catch (err) {
-            window.alert("There has been a mistake!");
         }
-
-
     }
     $(document).ready(function() {
-                $(".hide").click(function() {
-                    $(this).hide();
-                });
-                $("#show1").click(function() {
-                    $("#1").show()
-                });
-                $("#show2").click(function() {
-                    $("#2").fadeIn("slow", function() {
-                        alert("The slide toggle effect has completed.");
-                    });
-                });
-                $("#show3").click(function() {
-                    $("#3").slideDown()
-                });
+        $(".hide").click(function() {
+            $(this).hide();
+        });
+        $("#show1").click(function() {
+            $("#1").show()
+        });
+        $("#show2").click(function() {
+            $("#2").fadeIn("slow", function() {
+                alert("The slide toggle effect has completed.");
+            })
+        });
+        $("#show3").click(function() {
+            $("#3").slideDown()
+        })
+    });
 </script>
 
 <body>
@@ -208,24 +227,15 @@
     </header>
     <main>
         <div class="bmi">
-            <<<<<<< HEAD <h2 class="show">What is a BMI Calculator</h2>
-                <p class="hide">This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
-                <p class="hide">Body mass index (BMI) is a person@appos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
-                <h2 class="show">How is BMI used?</h2>
-                <p class="hide">BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness measurements,
-                    evaluations of diet, physical activity, and family history</p>
-                <h2 class="show">Why is BMI used to measure overweight and obesity?</h2>
-                <p class="hide">Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100
-                    to =======
-                    <h2 class="show" id="show1">What is a BMI Calculator</h2>
-                    <p class="hide" id="1">This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
-                    <p class="hide" id="1">Body mass index (BMI) is a person@appos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
-                    <h2 class="show" id="show2">How is BMI used?</h2>
-                    <p class="hide" id="2">BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness
-                        measurements, evaluations of diet, physical activity, and family history</p>
-                    <h2 class="show" id="show3">Why is BMI used to measure overweight and obesity?</h2>
-                    <p class="hide" id="3">Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by
-                        100 to >>>>>>> 42d9ad228ccdabc1f17d60785870b3f73f20de2d obtain height in meters. </p>
+            <h2 class="show" id="show1">What is a BMI Calculator</h2>
+            <p class="hide" id="1">This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
+            <p class="hide" id="1">Body mass index (BMI) is a person&apos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
+            <h2 class="show" id="show2">How is BMI used?</h2>
+            <p class="hide" id="2">BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness measurements,
+                evaluations of diet, physical activity, and family history</p>
+            <h2 class="show" id="show3">Why is BMI used to measure overweight and obesity?</h2>
+            <p class="hide" id="3">Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to
+                obtain height in meters. </p>
         </div>
         <table class="tbl">
             <thead>
@@ -261,6 +271,7 @@
             <p class="text">Weight</p>
             <input type="text" id="weight">
             <p id="result"></p>
+            <p id="morers"></p>
             <button id="btn" onClick="BMI()">Calculate</button>
             <p id="info">Please enter height in cm and weight in kg</p>
         </div>
@@ -328,3 +339,5 @@
 
 
 </body>
+
+</html>
