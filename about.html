@@ -19,7 +19,7 @@
             height: 40em;
             margin: auto;
             padding: auto;
-            background-image: url('images/background.jpg');
+            /* background-image: url('images/background.jpg'); */
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -40,6 +40,21 @@
             transform: translate(-50%);
         }
     </style>
+
+    <script>
+        const d = new Date();
+        window.onload = checkBg;
+
+        function checkBg() {
+            var h = d.getHours();
+            if (h >= 0 && h <= 8 || h >= 18 && h <= 23)  {
+                document.body.style.backgroundImage = "url('images/background.jpg')";
+            }
+            else {
+                document.body.style.backgroundImage = "url('images/background_white.jpg')";
+            }
+        }
+    </script>
     <title>Astounding</title>
 </head>
 
