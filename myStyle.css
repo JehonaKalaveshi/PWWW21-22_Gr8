@@ -696,6 +696,16 @@ a:-webkit-any-link {
     border: 1px solid #333333;
     float: left;
     padding: 2%;
+    transition: transform .2s;
+    box-shadow: 1px 1px 20px #408199;
+}
+
+.month a img {
+    transition: all 2s ease-in-out;
+}
+
+.month a img:hover {
+    transform: scale(1.5);
 }
 
 .month h1,
@@ -766,6 +776,7 @@ h3 {
     border-radius: 5%;
     border: 1px solid #333333;
     float: right;
+    box-shadow: 1px 1px 20px #408199;
 }
 
 .signUp h2 {
@@ -822,6 +833,11 @@ email {
     margin-left: 2%;
     animation: mymove 6s infinite;
     animation-timing-function: ease-in-out;
+    transition: transform .2s;
+}
+
+#food img:hover {
+    transform: rotate(45deg);
 }
 
 #drink img {
@@ -832,6 +848,27 @@ email {
     margin-left: 2%;
     animation: mymove 6s infinite;
     animation-timing-function: ease;
+    transition: transform .2s;
+}
+
+#drink img:hover {
+    transform: rotateX(45deg);
+}
+
+#rope img {
+    width: 100px;
+    /* float: left; */
+    position: relative;
+    padding: 0.1em;
+    margin-left: 2%;
+    animation: mymove 6s infinite;
+    animation-timing-function: ease-out;
+    transition: transform .2s;
+}
+
+#rope img:hover {
+    /* transform: rotate(45deg); */
+    transform: rotateY(45deg);
 }
 
 #excercise img {
@@ -842,6 +879,12 @@ email {
     margin-left: 2%;
     animation: mymove 6s infinite;
     animation-timing-function: ease-in;
+    transition: transform .2s;
+}
+
+#excercise img:hover {
+    /* transform: rotate(45deg); */
+    transform: skew(20deg, 10deg);
 }
 
 #plan img {
@@ -852,4 +895,10 @@ email {
     margin-left: 2%;
     animation: mymove 6s infinite;
     animation-timing-function: ease-out;
+    transition: transform .2s;
+}
+
+#plan img:hover {
+    /* transform: rotate(45deg); */
+    transform: skew(20deg, 10deg);
 }
