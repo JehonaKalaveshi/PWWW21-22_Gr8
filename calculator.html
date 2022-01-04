@@ -9,6 +9,7 @@
     <title>Calculator - Astounding</title>
     <title>Blog posts - Astounding</title>
 </head>
+<script src="jQuery/jquery-3.6.0.js"></script>
 <style>
     main {
         background-image: linear-gradient(120deg, #f5f5f5, #b8b8b8);
@@ -155,6 +156,15 @@
         document.getElementById("result").innerHTML = "Your BMI is " + bmio;
 
     }
+    $(document).ready(function(){
+  $(".hide").click(function(){
+    $(this).hide();
+  });
+  $(".show").click(function(){
+    $(".hide").show()
+    });
+    
+});
 </script>
 
 <body>
@@ -181,14 +191,14 @@
     </header>
     <main>
         <div class="bmi">
-            <h2>What is a BMI Calculator</h2>
-            <p>This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
-            <p>Body mass index (BMI) is a person@appos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
-            <h2>How is BMI used?</h2>
-            <p>BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness measurements,
+            <h2 class = "show">What is a BMI Calculator</h2>
+            <p class="hide">This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
+            <p class="hide">Body mass index (BMI) is a person@appos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
+            <h2 class = "show">How is BMI used?</h2>
+            <p class="hide">BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness measurements,
                 evaluations of diet, physical activity, and family history</p>
-            <h2>Why is BMI used to measure overweight and obesity?</h2>
-            <p>Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to
+            <h2 class = "show">Why is BMI used to measure overweight and obesity?</h2>
+            <p class="hide">Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to
                 obtain height in meters. </p>
         </div>
         <table class="tbl">
