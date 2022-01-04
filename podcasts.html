@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="myStyle.css"> 
+    <link rel="stylesheet" href="myStyle.css">
     <title>Podcasts - Astounding</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
@@ -14,6 +14,10 @@
             width: 70%;
             margin-left: 15%;
             text-align: center;
+        }
+        
+        pods {
+            display: grid;
         }
     </style>
 </head>
@@ -40,37 +44,40 @@
         </nav>
     </header>
     <main>
-    <p>Based on your location:<p id="geolocationP"></p> we suggest you those podcasts.</p>
-    <p><b>NO EXCUSES</b>- Motivational Workout Speech 2019</p>
-    <audio controls autoplay>
+        <div class="pods">
+            <p>Based on your location:
+                <p id="geolocationP"></p> we suggest you those podcasts.</p>
+            <p><b>NO EXCUSES</b>- Motivational Workout Speech 2019</p>
+            <div><audio controls autoplay>
         <source src="images/motivational.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
-    </audio>
-    <br><br>
+    </audio></div>
+            <br><br>
 
-    <p><b>NO MATTER HOW HARD IT GETS</b> Motivational Workout Speech 2019 by Billy Alsbrooks</p>
-    <audio controls autoplay>
+            <p><b>NO MATTER HOW HARD IT GETS</b> Motivational Workout Speech 2019 by Billy Alsbrooks</p>
+            <div><audio controls autoplay>
         <source src="images/podcast2.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+            </div>
+            <br><br>
 
-    <br><br>
-
-    <p><b>Having Workout Discipline and Avoiding Burnout </b> - Jocko Willink</p>
-    <audio controls autoplay>
+            <p><b>Having Workout Discipline and Avoiding Burnout </b> - Jocko Willink</p>
+            <div><audio controls autoplay>
         <source src="images/podcast3.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
+            </div>
 
 
+            <br><br>
 
-    <br><br>
-
-    <p><b>Joe Rogan</b>- How To Workout Smarter</p>
-    <audio controls autoplay>
+            <p><b>Joe Rogan</b>- How To Workout Smarter</p>
+            <div> <audio controls autoplay>
         <source src="images/podcast4.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
-    </audio>
+    </audio></div>
+        </div>
     </main>
     <footer>
         <table>
@@ -134,17 +141,18 @@
 
     var geoParagraph = document.getElementById("geolocationP");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    geoParagraph.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            geoParagraph.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
 
-function showPosition(position) {
-    geoParagraph.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-}
+    function showPosition(position) {
+        geoParagraph.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
 </script>
+
 </html>
