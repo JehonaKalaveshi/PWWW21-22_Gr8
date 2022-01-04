@@ -151,20 +151,32 @@
     function BMI() {
         var h = document.getElementById('height').value;
         var w = document.getElementById('weight').value;
-        var bmi = w / (h / 100 * h / 100);
+        // var bmi = w / (h / 100 * h / 100);
+        var bmi = w / Math.pow((h / 100), 2);
         var bmio = (bmi.toFixed(2));
-        document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+        try {
+            if (h == null || h == '' || w == null || w == '') {
+                window.alert("Please put a valid weight and height");
+                document.getElementById("result").innerHTML = "Your BMI is " + NaN;
+            } else {
+                document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+            }
+        } catch (err) {
+            window.alert("There has been a mistake!");
+        }
+
 
     }
-    $(document).ready(function(){
-  $(".hide").click(function(){
-    $(this).hide();
-  });
-  $(".show").click(function(){
-    $(".hide").show()
+
+    $(document).ready(function() {
+        $(".hide").click(function() {
+            $(this).hide();
+        });
+        $(".show").click(function() {
+            $(".hide").show()
+        });
+
     });
-    
-});
 </script>
 
 <body>
@@ -191,13 +203,13 @@
     </header>
     <main>
         <div class="bmi">
-            <h2 class = "show">What is a BMI Calculator</h2>
+            <h2 class="show">What is a BMI Calculator</h2>
             <p class="hide">This calculator provides body mass index (BMI) and the corresponding BMI weight status category for adults 20 years and older.</p>
             <p class="hide">Body mass index (BMI) is a person@appos;s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.</p>
-            <h2 class = "show">How is BMI used?</h2>
+            <h2 class="show">How is BMI used?</h2>
             <p class="hide">BMI can be a screening tool, but it does not diagnose the body fatness or health of an individual. To determine if BMI is a health risk, a healthcare provider performs further assessments. Such assessments include skinfold thickness measurements,
                 evaluations of diet, physical activity, and family history</p>
-            <h2 class = "show">Why is BMI used to measure overweight and obesity?</h2>
+            <h2 class="show">Why is BMI used to measure overweight and obesity?</h2>
             <p class="hide">Formula: weight(kg)/[height(m)]<sup>2 </sup>, with te metric system, the formula for BMI is weight in kilograms divided by height in meters squared. Because height is commonly measured in centimeters, divide height in centimeters by 100 to
                 obtain height in meters. </p>
         </div>
@@ -283,10 +295,10 @@
                     <p><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                 </td>
                 <td>
-                    <input type="text" name="Emri" placeholder="Full Name" size="30">
-                    <input type="email" name="Email" placeholder="Email Address" size="30">
-                    <input type="text" name="Subject" placeholder="Subject" size="30">
-                    <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
+                    <input type="text" name="Emri" placeholder="Full Name" size="30" required>
+                    <input type="email" name="Email" placeholder="Email Address" size="30" required>
+                    <input type="text" name="Subject" placeholder="Subject" size="30" required>
+                    <textarea name="Message" rows="4" cols="29" placeholder="Message" required></textarea><br>
                     <button type="submit" class="rounded" value="Submit">SUBMIT</button>
                 </td>
             </tr>

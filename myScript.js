@@ -1,38 +1,20 @@
-const formName = document.getElementById('name');
-const formEmail = document.getElementById('email');
-const form = document.getElementById('logIn');
-const errorElement = document.getElement('error')
-form.addEventListener('submit', (e) => {
-    let messages = [];
-    if (formName.value === "" || formName.value === null) {
-        alert('Name is required!');
-
+function validateForm() {
+    let name = document.forms["myForm"]["name"].value;
+    let email = document.forms["myForm"]["email"].value;
+    if (name == "") {
+        window.alert("Name must be filled out!");
+        return false;
+    } else if (email == "") {
+        window.alert("Email must be filled out!");
+        return false;
+    } else if (name == "" && email == "") {
+        window.alert("Name and email must be filled out!");
+        return false;
     }
-    if (messages.length > 0) {
-        e.preventDefault();
-        errorElement.innerText = messages.join(',');
-    }
-});
+}
 
 ////////////////////////////////////////////////////
 
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     checkInputs();
-// });
-
-// function checkInputs() {
-//     const nameValue = formName.value.trim();
-//     const emailValue = formEmail.value.trim();
-
-//     if (nameValue === '') {
-//         setErrorFor(formName, 'Username cannot be blank');
-//     } else {
-//         setSuccessFor(formName);
-//     }
-// }
-// Web worker for counting time 
 var w;
 
 function startWorker() {
