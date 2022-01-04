@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #585858;
-            font-family: 'Arial';
+            font-family: 'Times New Roman', Times, serif;
             background-image: url("images/bg2.png"), url("images/bg1.jpg");  
             background-repeat: no-repeat, repeat;
             background-position: right bottom, left top;  
@@ -93,6 +93,8 @@
         footer {
             margin: 0;
         }
+        
+                
     </style>
     <script>
         function allowDrop(ev) {
@@ -175,8 +177,20 @@
                     <img src="images/logo_white.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
                 </div>
 
+
                 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <br><br>
+
+                <br>
+                <input list="answers" name="answer" id="answer" placeholder="What is 2+4?" style="border-radius:25px;">
+
+                <datalist id="answers">
+                    <option value="5">
+                    <option value="6">
+                    <option value="7">
+                    <option value="8">
+                  </datalist>
+                  <br>
+                  <br>
                 <input type="button" name="log" id="log" value="Log In">
                 <br><br>
                 <input type="checkbox" id="check">
@@ -215,7 +229,7 @@
                         <hr>
                         <a href="login.html">» Login</a>
                         <hr>
-                        <a href="index.html">» Home page</a>
+                        <a href="gameController.html">» Feeling Bored?</a>
                         <hr>
                         <a href="about.html">» About us</a>
                         <hr>
