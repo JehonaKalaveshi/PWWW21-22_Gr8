@@ -154,19 +154,23 @@ header nav ul li {
 }
 
 #serviceImg1 {
-    background-image: url(images/service1.png);
+    background-image: url(images/slim3.svg);
+    background-size: 8em 8em;
 }
 
 #serviceImg2 {
-    background-image: url(images/service2.png);
+    background-image: url(images/bodybuilding.svg);
+    background-size: 8em 8em;
 }
 
 #serviceImg3 {
-    background-image: url(images/service3.png);
+    background-image: url(images/nutrition.svg);
+    background-size: 20em 20em;
 }
 
 #serviceImg4 {
-    background-image: url(images/service4.png);
+    background-image: url(images/trainer.svg);
+    background-size: 8em 8em;
 }
 
 #serviceImg1:hover {
