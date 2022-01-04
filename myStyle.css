@@ -164,8 +164,8 @@ header nav ul li {
 }
 
 #serviceImg3 {
-    background-image: url(images/nutrition.svg);
-    background-size: 20em 20em;
+    background-image: url(images/molla.svg);
+    background-size: 8em 8em;
 }
 
 #serviceImg4 {
@@ -174,19 +174,19 @@ header nav ul li {
 }
 
 #serviceImg1:hover {
-    background-image: url(images/service1_hover.png);
+    background-image: url(images/slimwhite.svg);
 }
 
 #serviceImg2:hover {
-    background-image: url(images/service2_hover.png);
+    background-image: url(images/bodywhite.svg);
 }
 
 #serviceImg3:hover {
-    background-image: url(images/service3_hover.png);
+    background-image: url(images/mollawhite.svg);
 }
 
 #serviceImg4:hover {
-    background-image: url(images/service4_hover.png);
+    background-image: url(images/trainerwhite.svg);
 }
 
 .service p {
