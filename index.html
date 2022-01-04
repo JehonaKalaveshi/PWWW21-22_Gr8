@@ -7,14 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStyle.css">
     <title>Astounding</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="jQuery/jquery-3.6.0.js"></script>
     <script>
-        $(document).ready(function() {
-            $(".tweets").click(function() {
-                $(".user").animate({
-                    height: 'toggle'
-                });
+
+        $(document).ready(function(){
+            //Animation when you click on Latest Tweets
+            $(".tweets").click(function(){
+                $(".user").animate( {height: 'toggle'});
+
             });
+    //When you click the user you get the text and set the text to "No more tweets."        
+    $(".user").click(() => {
+     alert("Text: " + $(".user").text());
+     $(".user").text("No more tweets.");});
+    
+     //When you click on "From the Blog" you remove the title
+     $(".blog").click(() => {
+     alert("You removed the title of the blog" );
+     $("#blog").remove("#blog");});
+
+    //Adding a text when you click on Copyrighs
+     $(".copyright").click(function(){
+    $("#copyright").append(" <b>Edited in 2022 by: Bora Ballanca, Jehone Kalaveshi and Urim Berisha</b>.");
+  });
         });
     </script>
 </head>
@@ -114,17 +130,17 @@
     <table>
         <form method="post" action="http://www.randyconnolly.com/tests/process.php">
             <tr>
-                <th>From The Blog</th>
+                <th class="blog">From The Blog</th>
                 <th>Quick Links</th>
                 <th class="tweets">Latest Tweets</th>
                 <th>Contact Us</th>
             </tr>
             <tr rowspan="7">
                 <td>
-                    <p class="postTitle">How to have a better workout routine?</p>
+                    <p class="postTitle" id="blog">How to have a better workout routine?</p>
                     <p class="postUser"><a href="#">Jason</a>, jason@trainer.com</p>
-                    <p class="postUser">Thursday, 12th November 2021</p>
-                    <p>Lately, for me, it’s all been about self care. I’m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that means taking
+                    <p class="postUser" >Thursday, 12th November 2021</p>
+                    <p >Lately, for me, it’s all been about self care. I’m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that means taking
                         care of myself </p>
                     <p><a href="post.html">Read More »</a></p>
                 </td>
@@ -161,7 +177,7 @@
     </form>
     <div class="copyright">
         <address>
-    <p>Copyright &copy; 2013 Domain Name - All Rights Reserved</small></p>
+    <p id="copyright">Copyright &copy; 2013 Domain Name - All Rights Reserved</small></p>
 </address>
     </div>
 </footer>

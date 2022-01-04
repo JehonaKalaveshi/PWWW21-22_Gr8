@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="myStyle.css">
-    <title>Astounding</title>
+    <title>Jason - Astounding</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"> 
 </head>
 <style>
     main img {
@@ -69,7 +70,22 @@
     </header>
     <main>
 
-        <img src="images/team1.jpg" alt="Jason Reagalado">
+<img id="team1" width="220" height="277" src="images/team1.jpg" alt="Team member" style="display: none;">
+
+<canvas id="myCanvas" width="240" height="297" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("team1");
+  ctx.drawImage(img, 10, 10, 220, 277);
+}
+</script>
+
+
         <div class="person">
             <h1>Team Member 1</h1>
             <p id="identity"></p>
@@ -78,7 +94,7 @@
             <p id="eyeC"></p>
             <p id="initial"></p>
         </div>
-        <p id="moreInfo">Cassey is on a mission to spread the joy of fitness! With over 10 million subscribers across all platforms, Cassey&apos;s upbeat personality and genuine care for his students is what makes him an award-winning fitness instructor. He has been teaching
+        <p id="moreInfo">Cassey (or <abbr id="initials"></abbr> as we call him) is on a mission to spread the joy of fitness! With over 10 million subscribers across all platforms, Cassey&apos;s upbeat personality and genuine care for his students is what makes him an award-winning fitness instructor. He has been teaching
             his signature format, POP Pilates, for over 14 years and has certified thousands of instructors to teach the unique class in gyms across the world, with over 4,000 live in-studio classes being taught every month. Cassey&apos;s workouts have
             inspired millions of young people to get into the best shape of their lives, mentally and physically and now can be found in his top-rated mobile app. Cassey&apos;s passion for bringing joy into all facets of fitness is what led him to launch
             POPFLEX, a now beloved cult activewear brand, where he is the CEO and Lead Designer.</p>
@@ -110,6 +126,18 @@
             document.getElementById("moreInfo").innerHTML = result;
             let init = text.match(/J/g);
             document.getElementById("initial").innerHTML = init;
+
+
+            const paragraph = "" + jason.name();
+            const regex = /[A-Z]/g;
+            const found = paragraph.match(regex);
+
+            var initials = "";
+            for (var i = 0; i<found.length; i++) {
+                initials += found[i];
+            }
+
+            document.getElementById("initials").innerHTML = initials;
         </script>
     </main>
 
