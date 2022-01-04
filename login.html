@@ -68,15 +68,16 @@
             font-weight: bold;
             background-color: #949494;
         }
-
-        #div1, #div2 {
-  float: left;
-  width: 100px;
-  height: 35px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
-}
+        
+        #div1,
+        #div2 {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
         
         span {
             color: white;
@@ -95,20 +96,19 @@
     </style>
     <script>
         function allowDrop(ev) {
-          ev.preventDefault();
+            ev.preventDefault();
         }
-        
+
         function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
+            ev.dataTransfer.setData("text", ev.target.id);
         }
-        
+
         function drop(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
         }
-        
-        </script>
+    </script>
 </head>
 
 <body>
@@ -140,7 +140,7 @@
             var canvas = document.getElementById("myCanvas");
             var ctx = canvas.getContext('2d');
             ctx.shadowColor = "rgb(190, 190, 190)";
-            
+
             ctx.font = "50px arial";
             var gradient = ctx.createLinearGradient(0, 0, 200, 175);
             gradient.addColorStop(0, "rgb(255, 255, 255)");
@@ -169,13 +169,13 @@
                 <keygen name="rsaPublicKey" keytype="RSA">
                 <input type="Password" name="Pass" id="Pass" placeholder="Password">
                 <br><br>
-                <p style="color: azure;">Prove you're not a robot by dragging the picture:</p> 
-                
+                <p style="color: azure;">Prove you're not a robot by dragging the picture:</p>
+
                 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <img src="images/logo_white.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
-                  </div>
-                  
-                  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 <br><br>
                 <input type="button" name="log" id="log" value="Log In">
                 <br><br>
@@ -200,34 +200,35 @@
                         <p class="postTitle">How to have a better workout routine?</p>
                         <p class="postUser"><a href="#">Jason</a>, jason@trainer.com</p>
                         <p class="postUser">Thursday, 12th November 2021</p>
-                        <p>Lately, for me, it’s all been about self care. I’m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that means taking care of myself                        </p>
+                        <p>Lately, for me, it’s all been about self care. I’m really leaning in and realizing that I can apply self-care not just when I’m in the bath or snuggled on the couch, but literally whenever and wherever!<br><br> And that means taking
+                            care of myself </p>
                         <p><a href="post.html">Read More »</a></p>
                     </td>
                     <td>
                         <a href="podcasts.html">» Podcasts</a>
-                    <hr class="footer">
-                    <a href="blog.html">» Blogs</a>
-                    <hr>
-                    <a href="calculator.html">» BMI Calculator</a>
-                    <hr>
-                    <a href="calendar.html">» Calendar</a>
-                    <hr>
-                    <a href="login.html">» Login</a>
-                    <hr>
-                    <a href="index.html">» Home page</a>
-                    <hr>
-                    <a href="about.html">» About us</a>
-                    <hr>
+                        <hr class="footer">
+                        <a href="blog.html">» Blogs</a>
+                        <hr>
+                        <a href="calculator.html">» BMI Calculator</a>
+                        <hr>
+                        <a href="calendar.html">» Calendar</a>
+                        <hr>
+                        <a href="login.html">» Login</a>
+                        <hr>
+                        <a href="index.html">» Home page</a>
+                        <hr>
+                        <a href="about.html">» About us</a>
+                        <hr>
                     </td>
                     <td>
                         <p><a href="#">@hannahmorgan</a> I really love this gym. The trainers are the best, they are always there to help you and guide you to be your best self. 18 hours ago</p>
                         <p><a href="#">@tedmosby</a> This gym transformedme. Not ony physically, but in every aspect of my life. Forever thankful to all of the staff members that work there. 2 days ago</p>
                     </td>
                     <td>
-                        <input type="text" name="Emri" placeholder="Full Name" size="30">
-                        <input type="email" name="Email" placeholder="Email Address" size="30">
-                        <input type="text" name="Subject" placeholder="Subject" size="30">
-                        <textarea name="Message" rows="4" cols="29" placeholder="Message"></textarea><br>
+                        <input type="text" name="Emri" placeholder="Full Name" size="30" required>
+                        <input type="email" name="Email" placeholder="Email Address" size="30" required>
+                        <input type="text" name="Subject" placeholder="Subject" size="30" required>
+                        <textarea name="Message" rows="4" cols="29" placeholder="Message" required></textarea><br>
                         <button type="submit" class="rounded" value="Submit">SUBMIT</button>
                     </td>
                 </tr>
